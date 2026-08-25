@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "model": "MACE-MP-0-small",
+  "device": "cpu",
+  "dtype": "float64",
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+  "packages": {
+    "mace-torch": "0.3.16",
+    "torch": "2.13.0+cpu",
+    "ase": "3.29.0",
+    "numpy": "2.5.2"
+  },
+  "checkpoint_filename": "20231210mace128L0_energy_epoch249model",
+  "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "model_load_seconds": 0.16319439999642782,
+  "inference_seconds_total": 11.254916499980027,
+  "inference_seconds_per_structure_mean": 1.2505462777755585,
+  "n_structures": 9,
+  "n_atoms_per_structure": 57,
+  "scanned_h_index_zero_based": 0,
+  "dft_minimum_label": "r0",
+  "mace_minimum_label": "r8",
+  "relative_energy_error_eV": {
+    "mae": 0.19428982672834158,
+    "rmse": 0.2646675744894467,
+    "max_abs": 0.5676737146563369
+  },
+  "relative_energy_pearson_r": 0.9444986565038429,
+  "relative_energy_regions_eV": {
+    "near_minimum_dft_le_0.10_eV": {
+      "n": 5,
+      "mae": 0.0902991658526048,
+      "rmse": 0.11499584830229832,
+      "max_abs": 0.21377131430472218
+    },
+    "short_range_z_lt_0.90_A": {
+      "n": 2,
+      "mae": 0.17025474670495555,
+      "rmse": 0.2130734289347367,
+      "max_abs": 0.2983703481843918
+    },
+    "large_height_z_gt_1.40_A": {
+      "n": 2,
+      "mae": 0.4783015589410695,
+      "rmse": 0.4865796579211377,
+      "max_abs": 0.5676737146563369
+    }
+  },
+  "all_force_component_error_eV_per_A": {
+    "mae": 0.044484017276108956,
+    "rmse": 0.11716324833054888,
+    "max_abs": 1.5791094519217634
+  },
+  "h_fz_error_eV_per_A": {
+    "mae": 0.8056531795648618,
+    "rmse": 0.8926312344489491,
+    "max_abs": 1.5791094519217634
+  },
+  "points": [
+    {
+      "label": "r3",
+      "h_height_A": 0.5731170246999966,
+      "dft_energy_eV": -490.12238227,
+      "mace_energy_eV": -488.02926630219554,
+      "dft_relative_energy_eV": 0.7221046000000229,
+      "mace_relative_energy_eV": 1.0204749481844146,
+      "relative_energy_error_eV": 0.2983703481843918,
+      "dft_h_fz_eV_per_A": 2.082787,
+      "mace_h_fz_eV_per_A": 3.6618964519217636,
+      "h_fz_error_eV_per_A": 1.5791094519217634,
+      "inference_seconds": 1.3704726999858394
+    },
+    {
+      "label": "r1",
+      "h_height_A": 0.7731170248999888,
+      "dft_energy_eV": -490.5043459,
+      "mace_energy_eV": -488.6674611351544,
+      "dft_relative_energy_eV": 0.34014097000004995,
+      "mace_relative_energy_eV": 0.38228011522556926,
+      "relative_energy_error_eV": 0.042139145225519314,
+      "dft_h_fz_eV_per_A": 1.659129,
+      "mace_h_fz_eV_per_A": 2.5654847365937092,
+      "h_fz_error_eV_per_A": 0.9063557365937092,
+      "inference_seconds": 1.7527045999886468
+    },
+    {
+      "label": "r5",
+      "h_height_A": 0.973117025199997,
+      "dft_energy_eV": -490.75866753,
+      "mace_energy_eV": -489.01185557830195,
+      "dft_relative_energy_eV": 0.08581934000000047,
+      "mace_relative_energy_eV": 0.03788567207800497,
+      "relative_energy_error_eV": -0.04793366792199549,
+      "dft_h_fz_eV_per_A": 0.860898,
+      "mace_h_fz_eV_per_A": 0.8256662574509133,
+      "h_fz_error_eV_per_A": -0.035231742549086786,
+      "inference_seconds": 1.2272533999930602
+    },
+    {
+      "label": "r8",
+      "h_height_A": 1.0731170247999984,
+      "dft_energy_eV": -490.82320878,
+      "mace_energy_eV": -489.04974125037995,
+      "dft_relative_energy_eV": 0.021278090000009797,
+      "mace_relative_energy_eV": 0.0,
+      "relative_energy_error_eV": -0.021278090000009797,
+      "dft_h_fz_eV_per_A": 0.428036,
+      "mace_h_fz_eV_per_A": -0.05064052906319192,
+      "h_fz_error_eV_per_A": -0.47867652906319197,
+      "inference_seconds": 1.205486099992413
+    },
+    {
+      "label": "r0",
+      "h_height_A": 1.1731170247999927,
+      "dft_energy_eV": -490.84448687,
+      "mace_energy_eV": -489.0071584998402,
+      "dft_relative_energy_eV": 0.0,
+      "mace_relative_energy_eV": 0.04258275053973648,
+      "relative_energy_error_eV": 0.04258275053973648,
+      "dft_h_fz_eV_per_A": 0.000248,
+      "mace_h_fz_eV_per_A": -0.7671318308901849,
+      "h_fz_error_eV_per_A": -0.7673798308901849,
+      "inference_seconds": 1.070072500006063
+    },
+    {
+      "label": "r7",
+      "h_height_A": 1.2731170248000012,
+      "dft_energy_eV": -490.82393648,
+      "mace_energy_eV": -488.90326085388335,
+      "dft_relative_energy_eV": 0.020550390000039442,
+      "mace_relative_energy_eV": 0.1464803964965995,
+      "relative_energy_error_eV": 0.12593000649656005,
+      "dft_h_fz_eV_per_A": -0.403695,
+      "mace_h_fz_eV_per_A": -1.2793550050220894,
+      "h_fz_error_eV_per_A": -0.8756600050220894,
+      "inference_seconds": 1.1287753000215162
+    },
+    {
+      "label": "r6",
+      "h_height_A": 1.3731170248999973,
+      "dft_energy_eV": -490.76455837,
+      "mace_energy_eV": -488.7560414360752,
+      "dft_relative_energy_eV": 0.07992850000005092,
+      "mace_relative_energy_eV": 0.2936998143047731,
+      "relative_energy_error_eV": 0.21377131430472218,
+      "dft_h_fz_eV_per_A": -0.771922,
+      "mace_h_fz_eV_per_A": -1.6498366577887755,
+      "h_fz_error_eV_per_A": -0.8779146577887755,
+      "inference_seconds": 1.0744534999830648
+    },
+    {
+      "label": "r2",
+      "h_height_A": 1.5731170242999895,
+      "dft_energy_eV": -490.54679647,
+      "mace_energy_eV": -488.3631214471541,
+      "dft_relative_energy_eV": 0.2976904000000218,
+      "mace_relative_energy_eV": 0.6866198032258239,
+      "relative_energy_error_eV": 0.38892940322580216,
+      "dft_h_fz_eV_per_A": -1.369064,
+      "mace_h_fz_eV_per_A": -2.265044509293678,
+      "h_fz_error_eV_per_A": -0.8959805092936779,
+      "inference_seconds": 1.0648164000012912
+    },
+    {
+      "label": "r4",
+      "h_height_A": 1.7731170248000012,
+      "dft_energy_eV": -490.22984756,
+      "mace_energy_eV": -487.8674282257236,
+      "dft_relative_energy_eV": 0.6146393100000296,
+      "mace_relative_energy_eV": 1.1823130246563665,
+      "relative_energy_error_eV": 0.5676737146563369,
+      "dft_h_fz_eV_per_A": -1.764092,
+      "mace_h_fz_eV_per_A": -2.598662152961278,
+      "h_fz_error_eV_per_A": -0.8345701529612779,
+      "inference_seconds": 1.3608820000081323
+    }
+  ]
+}
