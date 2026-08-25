@@ -7,7 +7,7 @@ frozen and one H atom is displaced along `z`.
 
 The project is deliberately baseline-first. It does not claim that MACE is
 accurate, that fine-tuning helps, or that the scan is a desorption barrier.
-Those conclusions depend on measured results that have not yet been produced.
+Those conclusions are limited to the measured results reported below.
 
 ![DFT constrained H-height scan](artifacts/dft_zscan.svg)
 
@@ -76,7 +76,7 @@ MACE-MP-0-small was evaluated without fitting on all nine r0-r8 structures.
 Forces require no elemental reference correction, and the fixed-composition
 energy curve requires no fitted elemental shift.
 
-![DFT versus zero-shot MACE energy and H-force curves](artifacts/mace_zeroshot.png)
+![DFT versus zero-shot MACE energy and H-force curves](artifacts/mace_zeroshot.svg)
 
 | Metric | Measured value |
 |---|---:|
