@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#18212b}.axis{stroke:#18212b;stroke-width:1.5}.grid{stroke:#dce3ea;stroke-width:1}.curve{fill:none;stroke:#1769aa;stroke-width:3}.point{fill:#ff8f00;stroke:white;stroke-width:1.5}</style>
+<line class="axis" x1="85" y1="430" x2="770" y2="430"/>
+<line class="axis" x1="85" y1="45" x2="85" y2="430"/>
+<line class="grid" x1="85" y1="430.0" x2="770" y2="430.0"/>
+<text x="75" y="435.0" text-anchor="end" font-size="13">0.00</text>
+<line class="grid" x1="85" y1="353.0" x2="770" y2="353.0"/>
+<text x="75" y="358.0" text-anchor="end" font-size="13">0.14</text>
+<line class="grid" x1="85" y1="276.0" x2="770" y2="276.0"/>
+<text x="75" y="281.0" text-anchor="end" font-size="13">0.29</text>
+<line class="grid" x1="85" y1="199.0" x2="770" y2="199.0"/>
+<text x="75" y="204.0" text-anchor="end" font-size="13">0.43</text>
+<line class="grid" x1="85" y1="122.0" x2="770" y2="122.0"/>
+<text x="75" y="127.0" text-anchor="end" font-size="13">0.58</text>
+<line class="grid" x1="85" y1="45.0" x2="770" y2="45.0"/>
+<text x="75" y="50.0" text-anchor="end" font-size="13">0.72</text>
+<text x="85.0" y="455" text-anchor="middle" font-size="13">0.57</text>
+<text x="256.2" y="455" text-anchor="middle" font-size="13">0.87</text>
+<text x="427.5" y="455" text-anchor="middle" font-size="13">1.17</text>
+<text x="598.8" y="455" text-anchor="middle" font-size="13">1.47</text>
+<text x="770.0" y="455" text-anchor="middle" font-size="13">1.77</text>
+<polyline class="curve" points="85.0,45.0 199.2,248.6 313.3,384.2 370.4,418.7 427.5,430.0 484.6,419.0 541.7,387.4 655.8,271.3 770.0,102.3"/>
+<circle class="point" cx="85.0" cy="45.0" r="5"/>
+<text x="85.0" y="35.0" text-anchor="middle" font-size="12">r3</text>
+<circle class="point" cx="199.2" cy="248.6" r="5"/>
+<text x="199.2" y="238.6" text-anchor="middle" font-size="12">r1</text>
+<circle class="point" cx="313.3" cy="384.2" r="5"/>
+<text x="313.3" y="374.2" text-anchor="middle" font-size="12">r5</text>
+<circle class="point" cx="370.4" cy="418.7" r="5"/>
+<text x="370.4" y="408.7" text-anchor="middle" font-size="12">r8</text>
+<circle class="point" cx="427.5" cy="430.0" r="5"/>
+<text x="427.5" y="420.0" text-anchor="middle" font-size="12">r0</text>
+<circle class="point" cx="484.6" cy="419.0" r="5"/>
+<text x="484.6" y="409.0" text-anchor="middle" font-size="12">r7</text>
+<circle class="point" cx="541.7" cy="387.4" r="5"/>
+<text x="541.7" y="377.4" text-anchor="middle" font-size="12">r6</text>
+<circle class="point" cx="655.8" cy="271.3" r="5"/>
+<text x="655.8" y="261.3" text-anchor="middle" font-size="12">r2</text>
+<circle class="point" cx="770.0" cy="102.3" r="5"/>
+<text x="770.0" y="92.3" text-anchor="middle" font-size="12">r4</text>
+<text x="400.0" y="25" text-anchor="middle" font-size="20" font-weight="bold">DFT constrained H-height scan on NbP</text>
+<text x="400.0" y="482" text-anchor="middle" font-size="15">H height above topmost substrate atom (Å)</text>
+<text x="20" y="250.0" text-anchor="middle" font-size="15" transform="rotate(-90 20 250.0)">E(z) − E_min (eV)</text>
+</svg>
