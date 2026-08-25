@@ -1,0 +1,634 @@
+{
+  "summary": {
+    "schema_version": 1,
+    "energy_convention": "VASP energy(sigma->0)",
+    "scf_root": "raw://03_SCF",
+    "h2_directory": "raw://H2",
+    "observed_labels": [
+      "clean",
+      "r0",
+      "r1",
+      "r2",
+      "r3",
+      "r4",
+      "r5",
+      "r6",
+      "r7",
+      "r8"
+    ],
+    "missing_labels": [],
+    "duplicate_labels": [],
+    "all_scf_completed": true,
+    "all_zscan_forces_complete": true,
+    "zscan_method_signatures": 1,
+    "zscan_substrate_geometry_hashes": 1,
+    "h2_completed": true,
+    "h2_force_count": 2,
+    "h2_max_force_eV_per_A": 0.372344,
+    "notes": [
+      "Geometry origin is SOC relaxation; reference labels are collinear SCF.",
+      "r0-r8 are frozen static points, not a relaxed pathway.",
+      "Failed r7/r8 archives are excluded in favor of successful reruns."
+    ]
+  },
+  "cases": [
+    {
+      "label": "clean",
+      "source_id": "raw://03_SCF/out_r0_nH_scf_20260122_141743",
+      "source_name": "out_r0_nH_scf_20260122_141743",
+      "poscar_sha256": "b942032fed476637eeeeced3091ae569b909c9ccf4bce8e79f6ab373999cb42e",
+      "outcar_sha256": "aa14400c2beea1f82c75f13edd4b92dd0320a6b15d5366b46700f8e28e85b231",
+      "composition": {
+        "Nb": 28,
+        "P": 28
+      },
+      "atom_count": 56,
+      "cell_A": [
+        [
+          3.3583631516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.3583631516,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          90.2924575806
+        ]
+      ],
+      "h_index_zero_based": null,
+      "h_z_A": null,
+      "surface_z_A": 80.05801667883053,
+      "h_height_A": null,
+      "h_force_eV_per_A": null,
+      "max_substrate_force_eV_per_A": 0.21929400007752148,
+      "completed": true,
+      "electronic_error": false,
+      "nions": 56,
+      "ispin": 2,
+      "lsorbit": "F",
+      "lnoncollinear": "F",
+      "encut_eV": 400.0,
+      "ediff_eV": 1e-07,
+      "ismear": 1,
+      "sigma_eV": 0.2,
+      "toten_eV": -486.61420385,
+      "energy_without_entropy_eV": -486.69901061,
+      "energy_sigma0_eV": -486.64247277,
+      "force_count": 56,
+      "max_force_eV_per_A": 0.21929400007752148
+    },
+    {
+      "label": "r0",
+      "source_id": "raw://03_SCF/out_r0_scf_20260225_133316",
+      "source_name": "out_r0_scf_20260225_133316",
+      "poscar_sha256": "c61cb1aa582ab2cb958f13f6719657912dacd9809de5af27b0d210b2c7bec13d",
+      "outcar_sha256": "b8d34fa59ab91a47b834b016df9bb4650a375ac8be92436d265538d6c222e34e",
+      "composition": {
+        "H": 1,
+        "Nb": 28,
+        "P": 28
+      },
+      "atom_count": 57,
+      "cell_A": [
+        [
+          3.3583631516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.3583631516,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          90.2924575806
+        ]
+      ],
+      "h_index_zero_based": 0,
+      "h_z_A": 81.30911340303008,
+      "surface_z_A": 80.13599637823121,
+      "h_height_A": 1.17311702479887,
+      "h_force_eV_per_A": [
+        -1.4e-05,
+        0.00205,
+        0.000248
+      ],
+      "max_substrate_force_eV_per_A": 0.23011800160352514,
+      "completed": true,
+      "electronic_error": false,
+      "nions": 57,
+      "ispin": 2,
+      "lsorbit": "F",
+      "lnoncollinear": "F",
+      "encut_eV": 400.0,
+      "ediff_eV": 1e-07,
+      "ismear": 1,
+      "sigma_eV": 0.2,
+      "toten_eV": -490.81319057,
+      "energy_without_entropy_eV": -490.90707946,
+      "energy_sigma0_eV": -490.84448687,
+      "force_count": 57,
+      "max_force_eV_per_A": 0.23011800160352514
+    },
+    {
+      "label": "r1",
+      "source_id": "raw://03_SCF/out_r1_scf_20251020_145939",
+      "source_name": "out_r1_scf_20251020_145939",
+      "poscar_sha256": "4db86d311b500cd67799ca735e8ff31e201b27c971d9074472560b22567735c5",
+      "outcar_sha256": "b079bc9fa21adc0faa937cc25430337c9cfecf4e0edab23e6eddf5b9b79ef4f0",
+      "composition": {
+        "H": 1,
+        "Nb": 28,
+        "P": 28
+      },
+      "atom_count": 57,
+      "cell_A": [
+        [
+          3.3583631516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.3583631516,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          90.2924575806
+        ]
+      ],
+      "h_index_zero_based": 0,
+      "h_z_A": 80.9091134031419,
+      "surface_z_A": 80.13599637823121,
+      "h_height_A": 0.7731170249106896,
+      "h_force_eV_per_A": [
+        -1e-05,
+        0.008383,
+        1.659129
+      ],
+      "max_substrate_force_eV_per_A": 1.2880540348160865,
+      "completed": true,
+      "electronic_error": false,
+      "nions": 57,
+      "ispin": 2,
+      "lsorbit": "F",
+      "lnoncollinear": "F",
+      "encut_eV": 400.0,
+      "ediff_eV": 1e-07,
+      "ismear": 1,
+      "sigma_eV": 0.2,
+      "toten_eV": -490.47282313,
+      "energy_without_entropy_eV": -490.56739144,
+      "energy_sigma0_eV": -490.5043459,
+      "force_count": 57,
+      "max_force_eV_per_A": 1.6591501780821412
+    },
+    {
+      "label": "r2",
+      "source_id": "raw://03_SCF/out_r2_scf_20251021_104820",
+      "source_name": "out_r2_scf_20251021_104820",
+      "poscar_sha256": "828092838b6bf5df8b48156b3f269692c25d7c35791a418d01baff57188bdc68",
+      "outcar_sha256": "2c4f68fe74645a30ef26ae4cb356c5605d0ea949d495490451d4641dff5cb3f1",
+      "composition": {
+        "H": 1,
+        "Nb": 28,
+        "P": 28
+      },
+      "atom_count": 57,
+      "cell_A": [
+        [
+          3.3583631516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.3583631516,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          90.2924575806
+        ]
+      ],
+      "h_index_zero_based": 0,
+      "h_z_A": 81.70911340249083,
+      "surface_z_A": 80.13599637823121,
+      "h_height_A": 1.5731170242596164,
+      "h_force_eV_per_A": [
+        -1.4e-05,
+        -0.000287,
+        -1.369064
+      ],
+      "max_substrate_force_eV_per_A": 1.1579557840461785,
+      "completed": true,
+      "electronic_error": false,
+      "nions": 57,
+      "ispin": 2,
+      "lsorbit": "F",
+      "lnoncollinear": "F",
+      "encut_eV": 400.0,
+      "ediff_eV": 1e-07,
+      "ismear": 1,
+      "sigma_eV": 0.2,
+      "toten_eV": -490.5162053,
+      "energy_without_entropy_eV": -490.60797881,
+      "energy_sigma0_eV": -490.54679647,
+      "force_count": 57,
+      "max_force_eV_per_A": 1.3690640301538128
+    },
+    {
+      "label": "r3",
+      "source_id": "raw://03_SCF/out_r3_scf_20251021_141454",
+      "source_name": "out_r3_scf_20251021_141454",
+      "poscar_sha256": "d02861b092b6774156b59a90caffcfd230ff1512a4d3ff8e1ddf14155dc1e903",
+      "outcar_sha256": "4b8b20a4e95b3a01b3907c62d0f0726c1e9e567343fe6cd2bf72cf3f368e6479",
+      "composition": {
+        "H": 1,
+        "Nb": 28,
+        "P": 28
+      },
+      "atom_count": 57,
+      "cell_A": [
+        [
+          3.3583631516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.3583631516,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          90.2924575806
+        ]
+      ],
+      "h_index_zero_based": 0,
+      "h_z_A": 80.7091134028532,
+      "surface_z_A": 80.13599637823121,
+      "h_height_A": 0.5731170246219932,
+      "h_force_eV_per_A": [
+        -6e-06,
+        0.013262,
+        2.082787
+      ],
+      "max_substrate_force_eV_per_A": 1.5312422289386483,
+      "completed": true,
+      "electronic_error": false,
+      "nions": 57,
+      "ispin": 2,
+      "lsorbit": "F",
+      "lnoncollinear": "F",
+      "encut_eV": 400.0,
+      "ediff_eV": 1e-07,
+      "ismear": 1,
+      "sigma_eV": 0.2,
+      "toten_eV": -490.09056925,
+      "energy_without_entropy_eV": -490.18600833,
+      "energy_sigma0_eV": -490.12238227,
+      "force_count": 57,
+      "max_force_eV_per_A": 2.082829222007652
+    },
+    {
+      "label": "r4",
+      "source_id": "raw://03_SCF/out_r4_scf_20251021_175005",
+      "source_name": "out_r4_scf_20251021_175005",
+      "poscar_sha256": "7fc83568aa5e25951b9991928b1fed60eca9435124f286d9ec1b03a0f0c3dcc6",
+      "outcar_sha256": "51275f502ee8f70485bfb55ca647a140d7ead32ddce1002a298fc0b0acc7e769",
+      "composition": {
+        "H": 1,
+        "Nb": 28,
+        "P": 28
+      },
+      "atom_count": 57,
+      "cell_A": [
+        [
+          3.3583631516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.3583631516,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          90.2924575806
+        ]
+      ],
+      "h_index_zero_based": 0,
+      "h_z_A": 81.90911340303006,
+      "surface_z_A": 80.13599637823121,
+      "h_height_A": 1.7731170247988501,
+      "h_force_eV_per_A": [
+        -1.3e-05,
+        -0.000467,
+        -1.764092
+      ],
+      "max_substrate_force_eV_per_A": 1.4876544360600013,
+      "completed": true,
+      "electronic_error": false,
+      "nions": 57,
+      "ispin": 2,
+      "lsorbit": "F",
+      "lnoncollinear": "F",
+      "encut_eV": 400.0,
+      "ediff_eV": 1e-07,
+      "ismear": 1,
+      "sigma_eV": 0.2,
+      "toten_eV": -490.19949657,
+      "energy_without_entropy_eV": -490.29054953,
+      "energy_sigma0_eV": -490.22984756,
+      "force_count": 57,
+      "max_force_eV_per_A": 1.7640920618612852
+    },
+    {
+      "label": "r5",
+      "source_id": "raw://03_SCF/out_r5_scf_20251030_105413",
+      "source_name": "out_r5_scf_20251030_105413",
+      "poscar_sha256": "f7b83e14f568373dfbc0d5fe99a98f3291226c2c70fa1e71d9dad359fa4b73ae",
+      "outcar_sha256": "8197afcfae6041c4aae6e6ca43fbe4350f925aeb6039511a79afbf188964e99f",
+      "composition": {
+        "H": 1,
+        "Nb": 28,
+        "P": 28
+      },
+      "atom_count": 57,
+      "cell_A": [
+        [
+          3.3583631516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.3583631516,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          90.2924575806
+        ]
+      ],
+      "h_index_zero_based": 0,
+      "h_z_A": 81.1091134034306,
+      "surface_z_A": 80.13599637823121,
+      "h_height_A": 0.9731170251993859,
+      "h_force_eV_per_A": [
+        -1.3e-05,
+        0.004559,
+        0.860898
+      ],
+      "max_substrate_force_eV_per_A": 0.6957748274592865,
+      "completed": true,
+      "electronic_error": false,
+      "nions": 57,
+      "ispin": 2,
+      "lsorbit": "F",
+      "lnoncollinear": "F",
+      "encut_eV": 400.0,
+      "ediff_eV": 1e-07,
+      "ismear": 1,
+      "sigma_eV": 0.2,
+      "toten_eV": -490.72745907,
+      "energy_without_entropy_eV": -490.82108444,
+      "energy_sigma0_eV": -490.75866753,
+      "force_count": 57,
+      "max_force_eV_per_A": 0.8609100714093197
+    },
+    {
+      "label": "r6",
+      "source_id": "raw://03_SCF/out_r6_scf_20251030_164336",
+      "source_name": "out_r6_scf_20251030_164336",
+      "poscar_sha256": "0ac151216a9b5129c0cc820fa43e217901d9f36097e0a8b55b7fabc17031c20f",
+      "outcar_sha256": "c91537f2e26af4669b677183c6d863345082fb5eebeb192338dd09636c512b83",
+      "composition": {
+        "H": 1,
+        "Nb": 28,
+        "P": 28
+      },
+      "atom_count": 57,
+      "cell_A": [
+        [
+          3.3583631516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.3583631516,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          90.2924575806
+        ]
+      ],
+      "h_index_zero_based": 0,
+      "h_z_A": 81.50911340310506,
+      "surface_z_A": 80.13599637823121,
+      "h_height_A": 1.3731170248738493,
+      "h_force_eV_per_A": [
+        -1.4e-05,
+        0.000421,
+        -0.771922
+      ],
+      "max_substrate_force_eV_per_A": 0.6438573755188334,
+      "completed": true,
+      "electronic_error": false,
+      "nions": 57,
+      "ispin": 2,
+      "lsorbit": "F",
+      "lnoncollinear": "F",
+      "encut_eV": 400.0,
+      "ediff_eV": 1e-07,
+      "ismear": 1,
+      "sigma_eV": 0.2,
+      "toten_eV": -490.73363183,
+      "energy_without_entropy_eV": -490.82641146,
+      "energy_sigma0_eV": -490.76455837,
+      "force_count": 57,
+      "max_force_eV_per_A": 0.7719221149319405
+    },
+    {
+      "label": "r7",
+      "source_id": "raw://03_SCF/out_r7_scf_20260207_172301",
+      "source_name": "out_r7_scf_20260207_172301",
+      "poscar_sha256": "ffb60c2ab3a11b32deb2de0f43a5a5afb72b7f832ecad9848bafb37f98784eb0",
+      "outcar_sha256": "4ecc1b296e746aa93abc8fba3f8233feae354ea9a00ac12a54eac86937865f3d",
+      "composition": {
+        "H": 1,
+        "Nb": 28,
+        "P": 28
+      },
+      "atom_count": 57,
+      "cell_A": [
+        [
+          3.3583631516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.3583631516,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          90.2924575806
+        ]
+      ],
+      "h_index_zero_based": 0,
+      "h_z_A": 81.40911340303008,
+      "surface_z_A": 80.13599637823121,
+      "h_height_A": 1.2731170247988643,
+      "h_force_eV_per_A": [
+        -1.4e-05,
+        0.00109,
+        -0.403695
+      ],
+      "max_substrate_force_eV_per_A": 0.332039764013288,
+      "completed": true,
+      "electronic_error": false,
+      "nions": 57,
+      "ispin": 2,
+      "lsorbit": "F",
+      "lnoncollinear": "F",
+      "encut_eV": 400.0,
+      "ediff_eV": 1e-07,
+      "ismear": 1,
+      "sigma_eV": 0.2,
+      "toten_eV": -490.79276667,
+      "energy_without_entropy_eV": -490.8862761,
+      "energy_sigma0_eV": -490.82393648,
+      "force_count": 57,
+      "max_force_eV_per_A": 0.40369647177180035
+    },
+    {
+      "label": "r8",
+      "source_id": "raw://03_SCF/out_r8_scf_20260213_095926",
+      "source_name": "out_r8_scf_20260213_095926",
+      "poscar_sha256": "0f0086a5cceef3209502475ef47d71c6848c73caa70823924ae2b6ef6200a7c0",
+      "outcar_sha256": "102102f53b4b56ccba0e9807a140a758b18f77b0b25ffe0011a6d73a0b11332f",
+      "composition": {
+        "H": 1,
+        "Nb": 28,
+        "P": 28
+      },
+      "atom_count": 57,
+      "cell_A": [
+        [
+          3.3583631516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.3583631516,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          90.2924575806
+        ]
+      ],
+      "h_index_zero_based": 0,
+      "h_z_A": 81.20911340303007,
+      "surface_z_A": 80.13599637823121,
+      "h_height_A": 1.0731170247988615,
+      "h_force_eV_per_A": [
+        -1.3e-05,
+        0.003033,
+        0.428036
+      ],
+      "max_substrate_force_eV_per_A": 0.35457025847637025,
+      "completed": true,
+      "electronic_error": false,
+      "nions": 57,
+      "ispin": 2,
+      "lsorbit": "F",
+      "lnoncollinear": "F",
+      "encut_eV": 400.0,
+      "ediff_eV": 1e-07,
+      "ismear": 1,
+      "sigma_eV": 0.2,
+      "toten_eV": -490.79190048,
+      "energy_without_entropy_eV": -490.88582539,
+      "energy_sigma0_eV": -490.82320878,
+      "force_count": 57,
+      "max_force_eV_per_A": 0.4280467457579838
+    }
+  ],
+  "h2": {
+    "label": "H2",
+    "source_id": "raw://H2/H_out_scf_20250707_133239",
+    "source_name": "H_out_scf_20250707_133239",
+    "poscar_sha256": "ec26b79a45f803234120b4a2cb5c318880a30471e9ab554e91f66e6858e09ff1",
+    "outcar_sha256": "f9073b4f006637ffa6dd5d2f72a3e60ce3d775ec9ed25a2cde6586d5927bd66b",
+    "composition": {
+      "H": 2
+    },
+    "atom_count": 2,
+    "cell_A": [
+      [
+        3.3583631516,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        3.3583631516,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        90.2924575806
+      ]
+    ],
+    "h_index_zero_based": 0,
+    "h_z_A": 81.92123236649,
+    "surface_z_A": null,
+    "h_height_A": null,
+    "h_force_eV_per_A": [
+      -0.0,
+      -0.0,
+      -0.372344
+    ],
+    "max_substrate_force_eV_per_A": null,
+    "completed": true,
+    "electronic_error": false,
+    "nions": 2,
+    "ispin": 2,
+    "lsorbit": "F",
+    "lnoncollinear": "F",
+    "encut_eV": 400.0,
+    "ediff_eV": 1e-08,
+    "ismear": 0,
+    "sigma_eV": 0.05,
+    "toten_eV": -6.76275276,
+    "energy_without_entropy_eV": -6.76275276,
+    "energy_sigma0_eV": -6.76275276,
+    "force_count": 2,
+    "max_force_eV_per_A": 0.372344
+  }
+}
