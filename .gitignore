@@ -1,0 +1,29 @@
+# data — never commit the extract or the xyz files
+data/
+data_smoke/
+*.xyz
+manifest.json
+tree.json
+
+# MACE training artefacts
+checkpoints/
+logs/
+results/
+*.model
+*.pt
+*.pth
+
+# python
+.venv/
+.tmp/
+.mace-cache/
+__pycache__/
+*.pyc
+
+# local/editor artefacts
+.pytest_cache/
+.ruff_cache/
+tests/tmp*/
+.idea/
+.vscode/
+
