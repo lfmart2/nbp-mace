@@ -11,7 +11,7 @@ and are safe to version. Raw VASP files are not distributed.
 - `mace_zeroshot.json`: full zero-shot metrics, environment provenance,
   checkpoint hash, timing, and point-level predictions.
 - `mace_zeroshot.csv`: compact point-level DFT/MACE comparison.
-- `mace_zeroshot.png`: portfolio figure comparing relative energies and H
+- `mace_zeroshot.svg`: portfolio figure comparing relative energies and H
   vertical forces.
 
 Public source identifiers are portable (`raw://...`). SHA-256 hashes connect
