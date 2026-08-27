@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "experiment": "M1 five-epoch QE collinear fine-tune",
+  "status": "completed",
+  "wall_seconds": 645.922304,
+  "epochs": 5,
+  "gradient_updates": 80,
+  "config_sha256": "1e1a0ee6e371226625490d9153beb35e338c3b3f3f825b36df607393794b99a9",
+  "model_filename": "M1_5epoch.model",
+  "model_sha256": "fa762686badcba80a689e198eb3f46cca7972720496058bfbbbea46f1002cf8d",
+  "split_manifest_sha256": "f70d4f6add8a65352aaa090bca9be7dc26c25edbbe8aed634249976175a7e6b7",
+  "selection": "Epoch selected by weighted validation loss; external r0-r8 absent from training and selection.",
+  "history": [
+    {
+      "epoch": -1,
+      "stage": "M0 initialization",
+      "loss": 1.28018643,
+      "energy_rmse_meV_per_atom": 0.22,
+      "force_rmse_meV_per_A": 160.09
+    },
+    {
+      "epoch": 0,
+      "stage": "fine-tuned",
+      "loss": 1.11266535,
+      "energy_rmse_meV_per_atom": 16.72,
+      "force_rmse_meV_per_A": 149.15
+    },
+    {
+      "epoch": 1,
+      "stage": "fine-tuned",
+      "loss": 0.96797709,
+      "energy_rmse_meV_per_atom": 30.71,
+      "force_rmse_meV_per_A": 138.87
+    },
+    {
+      "epoch": 2,
+      "stage": "fine-tuned",
+      "loss": 0.84688555,
+      "energy_rmse_meV_per_atom": 40.2,
+      "force_rmse_meV_per_A": 129.59
+    },
+    {
+      "epoch": 3,
+      "stage": "fine-tuned",
+      "loss": 0.74426032,
+      "energy_rmse_meV_per_atom": 45.21,
+      "force_rmse_meV_per_A": 121.22
+    },
+    {
+      "epoch": 4,
+      "stage": "fine-tuned",
+      "loss": 0.65168172,
+      "energy_rmse_meV_per_atom": 47.06,
+      "force_rmse_meV_per_A": 113.24
+    }
+  ]
+}

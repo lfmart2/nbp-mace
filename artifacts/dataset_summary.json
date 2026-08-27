@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "description": "Method-separated relaxation trajectories for the M0 zero-shot benchmark",
+  "deduplication": "SHA-256 of symbols and cell/Cartesian coordinates rounded to 1e-6 A; within source group only",
+  "split_policy": "No training in M0. Metrics reported by source calculation; no random frame split.",
+  "total_frames_parsed": 177,
+  "total_frames_unique_within_group": 175,
+  "groups": [
+    {
+      "id": "qe_clean_relax",
+      "code": "QE",
+      "physics": "collinear",
+      "role": "primary",
+      "source_id": "raw://qe/relax_clean_collinear/NbP.supercell_vasp.relax.out",
+      "source_sha256": "734218dd8682c39931aff537a4e79c362aa5304abd6855a86a49214416f46005",
+      "frames_parsed": 9,
+      "frames_unique": 9,
+      "duplicate_frames": [],
+      "formula": "Nb48P48",
+      "atoms_per_frame": 96,
+      "energy_span_eV": 0.06295408078585751,
+      "movable_force_norm_max_eV_per_A": 0.16119993720293627
+    },
+    {
+      "id": "qe_h_relax_a",
+      "code": "QE",
+      "physics": "collinear",
+      "role": "primary",
+      "source_id": "raw://qe/relax_h_collinear_run_a/NbP_H.supercell.nspin.relax.out",
+      "source_sha256": "a710a61cbfdc2e1960c2e2dda28b2fb84c34bc8017a17d83f58c1fac2eb885fd",
+      "frames_parsed": 41,
+      "frames_unique": 39,
+      "duplicate_frames": [
+        {
+          "index": 37,
+          "duplicate_of": 35
+        },
+        {
+          "index": 40,
+          "duplicate_of": 39
+        }
+      ],
+      "formula": "HNb48P48",
+      "atoms_per_frame": 97,
+      "energy_span_eV": 0.4899077686131932,
+      "movable_force_norm_max_eV_per_A": 1.6550057351832919
+    },
+    {
+      "id": "qe_h_relax_b",
+      "code": "QE",
+      "physics": "collinear",
+      "role": "overlap_diagnostic",
+      "source_id": "raw://qe/relax_h_collinear_run_b/NbP_H.supercell.spin.relax.out",
+      "source_sha256": "a834f596750e13d4ebedb024259557014ab3c6d0c9136181a3b9012dedd7c03d",
+      "frames_parsed": 36,
+      "frames_unique": 36,
+      "duplicate_frames": [],
+      "formula": "HNb48P48",
+      "atoms_per_frame": 97,
+      "energy_span_eV": 0.4908339080575388,
+      "movable_force_norm_max_eV_per_A": 1.6861536215410058
+    },
+    {
+      "id": "vasp_clean_relax_30",
+      "code": "VASP",
+      "physics": "collinear",
+      "role": "primary",
+      "source_id": "raw://qe_tree_vasp/relax_clean_30/vasprun.xml",
+      "source_sha256": "6c2821ff06aaad40a6ee82beac09ad39ed2e3b5183583fe03a1b37afa095c6ae",
+      "frames_parsed": 30,
+      "frames_unique": 30,
+      "duplicate_frames": [],
+      "formula": "Nb48P48",
+      "atoms_per_frame": 96,
+      "energy_span_eV": 0.30316699000002245,
+      "movable_force_norm_max_eV_per_A": 1.02747767
+    },
+    {
+      "id": "vasp_soc_clean_relax",
+      "code": "VASP",
+      "physics": "soc_noncollinear",
+      "role": "primary",
+      "source_id": "raw://vasp_soc/relax_clean_soc_48/OUTCAR",
+      "source_sha256": "d5af3397a92b8f40130c8fb7d523ce2b28e01e0c3f377af39eee17e0a955db7c",
+      "frames_parsed": 48,
+      "frames_unique": 48,
+      "duplicate_frames": [],
+      "formula": "Nb28P28",
+      "atoms_per_frame": 56,
+      "energy_span_eV": 0.03756115999999565,
+      "movable_force_norm_max_eV_per_A": 1.1661860710216874
+    },
+    {
+      "id": "vasp_soc_h_relax",
+      "code": "VASP",
+      "physics": "soc_noncollinear",
+      "role": "primary_incomplete",
+      "source_id": "raw://vasp_soc/relax_h_soc_13_incomplete/OUTCAR",
+      "source_sha256": "af0ad76364cc682beb398a71b75589f380d7c6e22869fbdc38b2121343ed02a8",
+      "frames_parsed": 13,
+      "frames_unique": 13,
+      "duplicate_frames": [],
+      "formula": "HNb28P28",
+      "atoms_per_frame": 57,
+      "energy_span_eV": 0.021317720000013196,
+      "movable_force_norm_max_eV_per_A": 1.232829228124074
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+epoch,stage,loss,energy_rmse_meV_per_atom,force_rmse_meV_per_A
+-1,M0 initialization,1.28018643,0.22,160.09
+0,fine-tuned,1.11266535,16.72,149.15
+1,fine-tuned,0.96797709,30.71,138.87
+2,fine-tuned,0.84688555,40.2,129.59
+3,fine-tuned,0.74426032,45.21,121.22
+4,fine-tuned,0.65168172,47.06,113.24

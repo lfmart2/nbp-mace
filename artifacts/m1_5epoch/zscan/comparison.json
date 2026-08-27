@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "role": "External fixed-composition r0-r8 test; absent from M1 train/validation/model selection",
+  "n_frames": 9,
+  "m0_model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "m1_model_sha256": "fa762686badcba80a689e198eb3f46cca7972720496058bfbbbea46f1002cf8d",
+  "dft_sampled_minimum_label": "r0",
+  "inference_seconds": {
+    "M0": 14.275875500054099,
+    "M1": 8.90890949999448
+  },
+  "models": {
+    "M0": {
+      "relative_energy_error_eV": {
+        "mae": 0.19428982672834158,
+        "rmse": 0.2646675744894467,
+        "max_abs": 0.5676737146563369
+      },
+      "h_fz_error_eV_per_A": {
+        "mae": 0.8056531795648618,
+        "rmse": 0.8926312344489491,
+        "max_abs": 1.5791094519217634
+      },
+      "all_force_component_error_eV_per_A": {
+        "mae": 0.044484017276108956,
+        "rmse": 0.11716324833054888,
+        "max_abs": 1.5791094519217634
+      },
+      "sampled_minimum_label": "r8"
+    },
+    "M1": {
+      "relative_energy_error_eV": {
+        "mae": 0.16946117052131943,
+        "rmse": 0.22839079961125874,
+        "max_abs": 0.48082317923081064
+      },
+      "h_fz_error_eV_per_A": {
+        "mae": 0.7180499583744937,
+        "rmse": 0.8030486257569083,
+        "max_abs": 1.4985296797082328
+      },
+      "all_force_component_error_eV_per_A": {
+        "mae": 0.03301939402189923,
+        "rmse": 0.0948649884811898,
+        "max_abs": 1.4985296797082328
+      },
+      "sampled_minimum_label": "r8"
+    }
+  }
+}

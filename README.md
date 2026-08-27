@@ -100,6 +100,75 @@ the minimum, and the sampled minimum shifts by 0.10 A. The low aggregate
 force-component MAE is not sufficient evidence by itself because the 56 slab
 atoms dilute the error on the chemically active H coordinate.
 
+## Expanded M0 relaxation benchmark
+
+A second, calculation-blocked M0 benchmark evaluates all currently accepted
+relaxation trajectories. It contains **177 parsed frames and 175 geometrically
+unique frames within source calculation**. MACE-MP-0-small receives no fitting,
+reference-energy calibration, or structures from these calculations during
+training by this project.
+
+![Zero-shot errors across relaxation calculations](artifacts/m0_relaxations/error_summary.svg)
+
+| Source calculation | Unique frames | Relative-energy MAE (eV) | Movable-force component MAE (eV/A) | H-force component MAE (eV/A) |
+|---|---:|---:|---:|---:|
+| QE clean, collinear | 9 | 0.0118 | 0.0647 | -- |
+| QE + H, collinear, run A | 39 | 0.0429 | 0.0968 | 0.4534 |
+| QE + H, collinear, overlap run B | 36 | 0.0445 | 0.0970 | 0.4547 |
+| VASP clean, collinear | 30 | 0.0246 | 0.0466 | -- |
+| VASP clean, SOC/noncollinear | 48 | 0.0068 | 0.0386 | -- |
+| VASP + H, SOC/noncollinear, incomplete | 13 | 0.0109 | 0.0468 | 0.2627 |
+
+Relative energies are referenced to the final frame of each calculation, so
+arbitrary composition-dependent energy offsets cancel. Forces are compared
+directly, and the reported force metric includes only movable atoms. The two QE
+H executions follow nearly the same relaxation path and are reported separately
+as an overlap diagnostic, not treated as independent validation.
+
+![DFT and MACE energy trajectories](artifacts/m0_relaxations/energy_trajectories.svg)
+
+The foundation model is strongest on the clean SOC trajectory and reproduces
+the ordering of the incomplete SOC+H path well. Its main weakness is the active
+hydrogen force: H-component MAE is 0.453--0.455 eV/A on the QE H trajectories
+and 0.263 eV/A for SOC+H. This measured gap motivates a carefully blocked
+small-data fine-tuning experiment; it does not yet demonstrate that fine-tuning
+will succeed.
+
+## M1: measured small-data fine-tuning
+
+M1 fine-tunes the M0 checkpoint for five CPU epochs using 32 QE collinear
+structures. The split is contiguous by source frame: 10 structures are reserved
+for validation and 6 late-relaxation structures form an internal test. A second
+36-frame QE+H execution is retained only as an overlap diagnostic because it
+follows nearly the same path. The complete r0--r8 scan remains external.
+
+![M0 versus M1 on the blocked QE data](artifacts/m1_5epoch/m0_vs_m1.svg)
+
+| Evaluation block | Metric | M0 | M1 | Change |
+|---|---|---:|---:|---:|
+| Internal QE+H test, 6 frames | H-force component MAE | 0.4334 eV/A | 0.3240 eV/A | -25.2% |
+| Internal QE+H test | Movable-force component MAE | 0.0972 eV/A | 0.0688 eV/A | -29.3% |
+| Internal QE+H test | Relative-energy MAE | 0.000120 eV | 0.0000867 eV | -27.9% |
+| Overlap QE+H diagnostic, 36 frames | H-force component MAE | 0.4547 eV/A | 0.3509 eV/A | -22.8% |
+| External r0--r8 scan, 9 frames | H vertical-force MAE | 0.8057 eV/A | 0.7180 eV/A | -10.9% |
+| External r0--r8 scan | Relative-energy MAE | 0.1943 eV | 0.1695 eV | -12.8% |
+
+![External r0-r8 comparison](artifacts/m1_5epoch/zscan/m0_vs_m1_zscan.svg)
+
+The external improvement is the strongest evidence that M1 learned something
+beyond memorizing adjacent relaxation frames. It is nevertheless modest: M1
+still predicts `r8`, rather than the DFT `r0`, as the sampled minimum. The model
+is therefore retained as a documented fine-tuning result, not presented as a
+production Nb-P-H potential.
+
+Training took 645.9 s for five epochs (80 gradient updates) on CPU. Validation
+force RMSE decreased from 160.09 to 113.24 meV/A, while aligned absolute-energy
+RMSE increased from 0.22 to 47.06 meV/atom under the force-focused loss. The
+fixed-composition relative-energy tests above are therefore used for scientific
+acceptance; the absolute-energy trade-off is reported rather than hidden.
+
+![M1 validation history](artifacts/m1_5epoch/training_history.svg)
+
 ## Reproduce the DFT audit
 
 The raw VASP files remain local and are not committed. With the same directory
@@ -129,12 +198,9 @@ loading (1.25 s/structure). The exact working numerical stack is in
 `requirements-lock.txt`; the checkpoint filename and SHA-256 hash are recorded
 in `artifacts/mace_zeroshot.json`.
 
-Fine-tuning is not part of the minimum successful project. The present data
-contain static collinear labels rather than a collinear relaxation trajectory.
-If zero-shot results motivate an extension, diverse geometries will be selected
-from the existing SOC trajectories and recalculated as frozen collinear SCF
-points before any train/validation/test split is attempted. The entire r0-r8
-family will remain outside training and hyperparameter selection.
+M0 contains no fitting. M1 uses the expanded relaxation labels with contiguous
+trajectory blocks, never a random frame split. The entire r0-r8 family remains
+outside training and hyperparameter selection as the external transfer test.
 
 ## Adsorption-energy status
 
@@ -154,8 +220,8 @@ is verified or recalculated.
 - The r0-r8 curve is a constrained one-dimensional cut, not a relaxed pathway,
   kinetic barrier, or minimum-energy path.
 - Geometry optimization used SOC, while benchmark labels use collinear SCF.
-- The current dataset is sufficient for zero-shot evaluation but not for a
-  defensible fine-tune.
+- The relaxation data support a limited fine-tuning study, but not a claim of a
+  general Nb-P-H potential or unrestricted molecular-dynamics reliability.
 - No claim is made about electronic bands, Weyl points, Fermi arcs, DOS,
   Wannier Hamiltonians, or transport; an MLIP does not predict those outputs.
 - No molecular dynamics, reactive sampling, high-temperature stability, or
@@ -167,6 +233,14 @@ is verified or recalculated.
 ```text
 src/audit_scf.py       reproducible DFT input audit and manifest generation
 src/eval_zscan.py      primary zero-shot energy and H-force evaluation
+src/build_benchmark_dataset.py  method-aware relaxation parsing and deduplication
+src/eval_relaxations.py         expanded zero-shot relaxation benchmark
+src/prepare_m1.py               blocked splits and training-only reference alignment
+src/eval_m1.py                  controlled M0/M1 held-out comparison
+src/eval_m1_zscan.py            external r0-r8 comparison
+src/summarize_m1_training.py    training history and reproducibility hashes
+configs/                        versioned fine-tuning configurations
+docs/M1_PROTOCOL.md             leakage controls and acceptance criteria
 artifacts/             small generated evidence committed to Git
 tests/                 automated scientific and parsing checks
 RUNBOOK.md             minimal reproduction commands and data policy
@@ -174,14 +248,22 @@ RUNBOOK.md             minimal reproduction commands and data policy
 
 ## Data availability
 
-Raw VASP outputs are not distributed through this repository because they are
-large and contain the broader source research archive. The public artifacts
-contain derived scalar values, portable source identifiers, and cryptographic
-hashes sufficient to trace results back to the private originals. A publishable
-sample-data policy will be reviewed before release.
+Raw VASP/QE outputs and coordinate-bearing structures are not distributed
+through this repository because they belong to the broader source research
+archive. The public artifacts contain derived scalar values, portable source
+identifiers, and cryptographic hashes that trace results to the private
+originals. The code, configuration, tests, tables, and figures are released
+under the MIT License; the underlying DFT data are available from the author
+subject to research-group approval.
 
 ## Status
 
-**DFT audit and zero-shot MACE-MP-0-small evaluation complete.** Every numeric
-claim above is backed by a committed generated artifact. Fine-tuning remains a
-conditional extension requiring additional collinear labels.
+**M0 and the five-epoch M1 study are complete.** Every numeric claim above is
+backed by a generated JSON/CSV artifact. The result supports small-data transfer
+learning experience while retaining explicit limits on generalization.
+
+## License and citation
+
+The repository software is available under the [MIT License](LICENSE). If you
+reuse the workflow or results, cite this repository and the MACE publications
+listed by the upstream [MACE project](https://github.com/ACEsuit/mace).

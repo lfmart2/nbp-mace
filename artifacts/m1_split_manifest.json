@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "name": "M1 blocked QE collinear fine-tuning split",
+  "policy": "Contiguous source-frame blocks; no random frame split. r0-r8 remains external and absent from all M1 files.",
+  "energy_alignment": "Least-squares elemental shifts fitted only to M1 training DFT-minus-MACE absolute energies; DFT relative energies and all forces are unchanged.",
+  "checkpoint_filename": "20231210mace128L0_energy_epoch249model",
+  "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "atomic_numbers": [
+    1,
+    15,
+    41
+  ],
+  "elemental_shifts_eV": {
+    "1": -14.285908503598288,
+    "15": -2333.0418276911296,
+    "41": -2333.041827691129
+  },
+  "alignment_matrix_rank": 2,
+  "alignment_singular_values": [
+    384.02750643454004,
+    2.2077820701939626,
+    6.0657187286950084e-15
+  ],
+  "training_alignment_error_eV": {
+    "mae": 0.06758470172462694,
+    "rmse": 0.1137619662876191
+  },
+  "alignment_inference_seconds": 102.68748259998392,
+  "splits": {
+    "train": {
+      "path": "data/m1/train.xyz",
+      "frames": 32,
+      "source_frames": [
+        {
+          "source_group": "qe_clean_relax",
+          "source_frame": 0
+        },
+        {
+          "source_group": "qe_clean_relax",
+          "source_frame": 1
+        },
+        {
+          "source_group": "qe_clean_relax",
+          "source_frame": 2
+        },
+        {
+          "source_group": "qe_clean_relax",
+          "source_frame": 3
+        },
+        {
+          "source_group": "qe_clean_relax",
+          "source_frame": 4
+        },
+        {
+          "source_group": "qe_clean_relax",
+          "source_frame": 5
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 0
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 1
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 2
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 3
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 4
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 5
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 6
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 7
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 8
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 9
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 10
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 11
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 12
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 13
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 14
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 15
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 16
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 17
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 18
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 19
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 20
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 21
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 22
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 23
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 24
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 25
+        }
+      ]
+    },
+    "valid": {
+      "path": "data/m1/valid.xyz",
+      "frames": 10,
+      "source_frames": [
+        {
+          "source_group": "qe_clean_relax",
+          "source_frame": 6
+        },
+        {
+          "source_group": "qe_clean_relax",
+          "source_frame": 7
+        },
+        {
+          "source_group": "qe_clean_relax",
+          "source_frame": 8
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 26
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 27
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 28
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 29
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 30
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 31
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 32
+        }
+      ]
+    },
+    "test_internal": {
+      "path": "data/m1/test_internal.xyz",
+      "frames": 6,
+      "source_frames": [
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 33
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 34
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 35
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 36
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 38
+        },
+        {
+          "source_group": "qe_h_relax_a",
+          "source_frame": 39
+        }
+      ]
+    },
+    "test_overlap": {
+      "path": "data/m1/test_overlap.xyz",
+      "frames": 36,
+      "source_frames": [
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 0
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 1
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 2
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 3
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 4
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 5
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 6
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 7
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 8
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 9
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 10
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 11
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 12
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 13
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 14
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 15
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 16
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 17
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 18
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 19
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 20
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 21
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 22
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 23
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 24
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 25
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 26
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 27
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 28
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 29
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 30
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 31
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 32
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 33
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 34
+        },
+        {
+          "source_group": "qe_h_relax_b",
+          "source_frame": 35
+        }
+      ]
+    }
+  }
+}

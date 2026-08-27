@@ -2,4 +2,3 @@ ase
 numpy
 matplotlib
 mace-torch
-

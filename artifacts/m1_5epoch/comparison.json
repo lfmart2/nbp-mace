@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "comparison": "MACE-MP-0-small versus M1 five-epoch fine-tune",
+  "m0_model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "m1_model_sha256": "fa762686badcba80a689e198eb3f46cca7972720496058bfbbbea46f1002cf8d",
+  "device": "cpu",
+  "dtype": "float64",
+  "n_evaluations_per_model": 84,
+  "inference_seconds": {
+    "M0": 178.41699510026956,
+    "M1": 133.29880789975869
+  },
+  "groups": [
+    {
+      "split": "train",
+      "source_group": "qe_clean_relax",
+      "n_frames": 6,
+      "relative_energy_reference": "last frame in this split/source-group block",
+      "metrics": {
+        "M0": {
+          "relative_energy_error_eV": {
+            "mae": 0.015875923886426335,
+            "rmse": 0.027677488132650432,
+            "max_abs": 0.06255805659520774
+          },
+          "movable_force_component_error_eV_per_A": {
+            "mae": 0.06471428565861524,
+            "rmse": 0.13349425594422568,
+            "max_abs": 0.6137982333909637
+          },
+          "h_force_component_error_eV_per_A": null
+        },
+        "M1": {
+          "relative_energy_error_eV": {
+            "mae": 0.01628283698001572,
+            "rmse": 0.0274066790290524,
+            "max_abs": 0.06117189154758762
+          },
+          "movable_force_component_error_eV_per_A": {
+            "mae": 0.044222886403923745,
+            "rmse": 0.09310058038767119,
+            "max_abs": 0.4902493794497206
+          },
+          "h_force_component_error_eV_per_A": null
+        }
+      }
+    },
+    {
+      "split": "train",
+      "source_group": "qe_h_relax_a",
+      "n_frames": 26,
+      "relative_energy_reference": "last frame in this split/source-group block",
+      "metrics": {
+        "M0": {
+          "relative_energy_error_eV": {
+            "mae": 0.06134784796404784,
+            "rmse": 0.1282463930476385,
+            "max_abs": 0.47426305601948116
+          },
+          "movable_force_component_error_eV_per_A": {
+            "mae": 0.09649440809539689,
+            "rmse": 0.20753495122407536,
+            "max_abs": 2.7843288933643566
+          },
+          "h_force_component_error_eV_per_A": {
+            "mae": 0.46343079967206235,
+            "rmse": 0.8138344836163857,
+            "max_abs": 2.0785764440471
+          }
+        },
+        "M1": {
+          "relative_energy_error_eV": {
+            "mae": 0.055107368031017887,
+            "rmse": 0.1333045586681728,
+            "max_abs": 0.4925431669129239
+          },
+          "movable_force_component_error_eV_per_A": {
+            "mae": 0.06815738838653178,
+            "rmse": 0.15342604330742185,
+            "max_abs": 2.6303311969210776
+          },
+          "h_force_component_error_eV_per_A": {
+            "mae": 0.36165361418578845,
+            "rmse": 0.6476753058745143,
+            "max_abs": 1.9464274592449953
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "source_group": "qe_clean_relax",
+      "n_frames": 3,
+      "relative_energy_reference": "last frame in this split/source-group block",
+      "metrics": {
+        "M0": {
+          "relative_energy_error_eV": {
+            "mae": 0.00010604879507051616,
+            "rmse": 0.00013296231449296022,
+            "max_abs": 0.0001939183501917796
+          },
+          "movable_force_component_error_eV_per_A": {
+            "mae": 0.06479633451850805,
+            "rmse": 0.13334210624072793,
+            "max_abs": 0.5837456586550187
+          },
+          "h_force_component_error_eV_per_A": null
+        },
+        "M1": {
+          "relative_energy_error_eV": {
+            "mae": 9.075436340329664e-05,
+            "rmse": 0.00013541114545133427,
+            "max_abs": 0.0002308546673930323
+          },
+          "movable_force_component_error_eV_per_A": {
+            "mae": 0.04402211158310697,
+            "rmse": 0.09346902184239542,
+            "max_abs": 0.46044740051899297
+          },
+          "h_force_component_error_eV_per_A": null
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "source_group": "qe_h_relax_a",
+      "n_frames": 7,
+      "relative_energy_reference": "last frame in this split/source-group block",
+      "metrics": {
+        "M0": {
+          "relative_energy_error_eV": {
+            "mae": 0.001068723918284117,
+            "rmse": 0.0012940493804369463,
+            "max_abs": 0.0021383303127322506
+          },
+          "movable_force_component_error_eV_per_A": {
+            "mae": 0.09735920947460656,
+            "rmse": 0.1981457617461892,
+            "max_abs": 1.3001615176863064
+          },
+          "h_force_component_error_eV_per_A": {
+            "mae": 0.43325246969571074,
+            "rmse": 0.7504152882886768,
+            "max_abs": 1.3001615176863064
+          }
+        },
+        "M1": {
+          "relative_energy_error_eV": {
+            "mae": 0.0006950304803012841,
+            "rmse": 0.0008396808451803543,
+            "max_abs": 0.0014148870143344539
+          },
+          "movable_force_component_error_eV_per_A": {
+            "mae": 0.06890997290993511,
+            "rmse": 0.14018083559704014,
+            "max_abs": 0.9719953109564091
+          },
+          "h_force_component_error_eV_per_A": {
+            "mae": 0.3238658333309098,
+            "rmse": 0.5609520905553231,
+            "max_abs": 0.9719953109564091
+          }
+        }
+      }
+    },
+    {
+      "split": "test_internal",
+      "source_group": "qe_h_relax_a",
+      "n_frames": 6,
+      "relative_energy_reference": "last frame in this split/source-group block",
+      "metrics": {
+        "M0": {
+          "relative_energy_error_eV": {
+            "mae": 0.0001202614844449575,
+            "rmse": 0.00017888058413798453,
+            "max_abs": 0.0003877448981484122
+          },
+          "movable_force_component_error_eV_per_A": {
+            "mae": 0.09721190234398089,
+            "rmse": 0.19802971684845536,
+            "max_abs": 1.3004632591890786
+          },
+          "h_force_component_error_eV_per_A": {
+            "mae": 0.43337853680376015,
+            "rmse": 0.7506336588397049,
+            "max_abs": 1.3004632591890786
+          }
+        },
+        "M1": {
+          "relative_energy_error_eV": {
+            "mae": 8.665945885392527e-05,
+            "rmse": 0.00013261359900651777,
+            "max_abs": 0.00029221907686860504
+          },
+          "movable_force_component_error_eV_per_A": {
+            "mae": 0.06875945671981867,
+            "rmse": 0.140075444918097,
+            "max_abs": 0.9723355242940729
+          },
+          "h_force_component_error_eV_per_A": {
+            "mae": 0.3239965729188025,
+            "rmse": 0.5611785582291889,
+            "max_abs": 0.9723355242940729
+          }
+        }
+      }
+    },
+    {
+      "split": "test_overlap",
+      "source_group": "qe_h_relax_b",
+      "n_frames": 36,
+      "relative_energy_reference": "last frame in this split/source-group block",
+      "metrics": {
+        "M0": {
+          "relative_energy_error_eV": {
+            "mae": 0.04454981669408969,
+            "rmse": 0.1102486215676169,
+            "max_abs": 0.4803801660997351
+          },
+          "movable_force_component_error_eV_per_A": {
+            "mae": 0.09697404575088592,
+            "rmse": 0.2052684755302701,
+            "max_abs": 2.815476773364357
+          },
+          "h_force_component_error_eV_per_A": {
+            "mae": 0.45472990771552296,
+            "rmse": 0.7960885123781568,
+            "max_abs": 2.0736718040471
+          }
+        },
+        "M1": {
+          "relative_energy_error_eV": {
+            "mae": 0.039964625627722704,
+            "rmse": 0.11403206899504569,
+            "max_abs": 0.4970698640979663
+          },
+          "movable_force_component_error_eV_per_A": {
+            "mae": 0.06856542430473413,
+            "rmse": 0.15013424135931236,
+            "max_abs": 2.661479076921078
+          },
+          "h_force_component_error_eV_per_A": {
+            "mae": 0.35087688644195,
+            "rmse": 0.6241559741791793,
+            "max_abs": 1.9415228192449954
+          }
+        }
+      }
+    }
+  ]
+}

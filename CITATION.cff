@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+title: "Zero-shot and small-data MACE benchmark for hydrogen on NbP"
+type: software
+authors:
+  - family-names: "Martinez-Gomez"
+    given-names: "Luis"
+repository-code: "https://github.com/lfmart2/nbp-mace"
+license: MIT
+date-released: 2026-08-27
+version: 1.0.0

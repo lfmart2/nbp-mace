@@ -16,4 +16,3 @@ and are safe to version. Raw VASP files are not distributed.
 
 Public source identifiers are portable (`raw://...`). SHA-256 hashes connect
 each record to the private raw file without exposing a local filesystem path.
-

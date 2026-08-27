@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "model": "MACE-MP-0-small",
+  "training_frames": 0,
+  "evaluation_protocol": "Per-calculation metrics; energies referenced to each trajectory's final frame; forces compared directly.",
+  "device": "cpu",
+  "dtype": "float64",
+  "python": "3.12.13",
+  "packages": {
+    "mace-torch": "0.3.16",
+    "torch": "2.13.0+cpu",
+    "ase": "3.29.0",
+    "numpy": "2.5.2"
+  },
+  "checkpoint_filename": "20231210mace128L0_energy_epoch249model",
+  "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "model_load_seconds": 0.43245660001412034,
+  "inference_seconds_total": 895.8546017998015,
+  "n_frames": 175,
+  "groups": [
+    {
+      "source_group": "qe_clean_relax",
+      "benchmark_role": "primary",
+      "code": "QE",
+      "physics": "collinear",
+      "n_frames": 9,
+      "n_atoms": 96,
+      "relative_energy_reference": "last frame of source trajectory",
+      "relative_energy_error_eV": {
+        "mae": 0.011758706876485626,
+        "rmse": 0.02342706010554056,
+        "max_abs": 0.06426716862597459
+      },
+      "relative_energy_pearson_r": -0.00037389179697968266,
+      "all_force_component_error_eV_per_A": {
+        "mae": 0.043161090185719675,
+        "rmse": 0.10895620938597146,
+        "max_abs": 0.6137982333909637
+      },
+      "movable_force_component_error_eV_per_A": {
+        "mae": 0.06474163527857951,
+        "rmse": 0.13344355865173665,
+        "max_abs": 0.6137982333909637
+      },
+      "h_force_component_error_eV_per_A": null,
+      "inference_seconds": 61.64950160001172
+    },
+    {
+      "source_group": "qe_h_relax_a",
+      "benchmark_role": "primary",
+      "code": "QE",
+      "physics": "collinear",
+      "n_frames": 39,
+      "n_atoms": 97,
+      "relative_energy_reference": "last frame of source trajectory",
+      "relative_energy_error_eV": {
+        "mae": 0.042872122441324864,
+        "rmse": 0.1041428834051764,
+        "max_abs": 0.4704278679239451
+      },
+      "relative_energy_pearson_r": 0.4853178224928136,
+      "all_force_component_error_eV_per_A": {
+        "mae": 0.06483918369186341,
+        "rmse": 0.16735081925683662,
+        "max_abs": 2.7843288933643566
+      },
+      "movable_force_component_error_eV_per_A": {
+        "mae": 0.09676001258631925,
+        "rmse": 0.20443583836332976,
+        "max_abs": 2.7843288933643566
+      },
+      "h_force_component_error_eV_per_A": {
+        "mae": 0.45339075128631173,
+        "rmse": 0.7932900948319682,
+        "max_abs": 2.0785764440471
+      },
+      "inference_seconds": 300.0952875002404
+    },
+    {
+      "source_group": "qe_h_relax_b",
+      "benchmark_role": "overlap_diagnostic",
+      "code": "QE",
+      "physics": "collinear",
+      "n_frames": 36,
+      "n_atoms": 97,
+      "relative_energy_reference": "last frame of source trajectory",
+      "relative_energy_error_eV": {
+        "mae": 0.04454981669408969,
+        "rmse": 0.1102486215676169,
+        "max_abs": 0.4803801660997351
+      },
+      "relative_energy_pearson_r": 0.45138463266519296,
+      "all_force_component_error_eV_per_A": {
+        "mae": 0.06498260797739779,
+        "rmse": 0.168032414583501,
+        "max_abs": 2.815476773364357
+      },
+      "movable_force_component_error_eV_per_A": {
+        "mae": 0.09697404575088592,
+        "rmse": 0.2052684755302701,
+        "max_abs": 2.815476773364357
+      },
+      "h_force_component_error_eV_per_A": {
+        "mae": 0.45472990771552296,
+        "rmse": 0.7960885123781568,
+        "max_abs": 2.0736718040471
+      },
+      "inference_seconds": 322.27811099984683
+    },
+    {
+      "source_group": "vasp_clean_relax_30",
+      "benchmark_role": "primary",
+      "code": "VASP",
+      "physics": "collinear",
+      "n_frames": 30,
+      "n_atoms": 96,
+      "relative_energy_reference": "last frame of source trajectory",
+      "relative_energy_error_eV": {
+        "mae": 0.024641384284639873,
+        "rmse": 0.03721285428785768,
+        "max_abs": 0.1399310565760743
+      },
+      "relative_energy_pearson_r": 0.9236467995047896,
+      "all_force_component_error_eV_per_A": {
+        "mae": 0.031064019106774778,
+        "rmse": 0.08046340216169943,
+        "max_abs": 0.4527266955782446
+      },
+      "movable_force_component_error_eV_per_A": {
+        "mae": 0.046596028660162166,
+        "rmse": 0.09854713913226029,
+        "max_abs": 0.4527266955782446
+      },
+      "h_force_component_error_eV_per_A": null,
+      "inference_seconds": 135.52442320011323
+    },
+    {
+      "source_group": "vasp_soc_clean_relax",
+      "benchmark_role": "primary",
+      "code": "VASP",
+      "physics": "soc_noncollinear",
+      "n_frames": 48,
+      "n_atoms": 56,
+      "relative_energy_reference": "last frame of source trajectory",
+      "relative_energy_error_eV": {
+        "mae": 0.0068296404725695465,
+        "rmse": 0.00831634435057422,
+        "max_abs": 0.01753249612380614
+      },
+      "relative_energy_pearson_r": 0.6466649309899557,
+      "all_force_component_error_eV_per_A": {
+        "mae": 0.027606557404739534,
+        "rmse": 0.07115202283180261,
+        "max_abs": 0.665377942104589
+      },
+      "movable_force_component_error_eV_per_A": {
+        "mae": 0.038649180366635345,
+        "rmse": 0.08418820876037393,
+        "max_abs": 0.665377942104589
+      },
+      "h_force_component_error_eV_per_A": null,
+      "inference_seconds": 59.45775299955858
+    },
+    {
+      "source_group": "vasp_soc_h_relax",
+      "benchmark_role": "primary_incomplete",
+      "code": "VASP",
+      "physics": "soc_noncollinear",
+      "n_frames": 13,
+      "n_atoms": 57,
+      "relative_energy_reference": "last frame of source trajectory",
+      "relative_energy_error_eV": {
+        "mae": 0.010941853846947406,
+        "rmse": 0.023404308207888247,
+        "max_abs": 0.07642577010614104
+      },
+      "relative_energy_pearson_r": 0.9525155587222262,
+      "all_force_component_error_eV_per_A": {
+        "mae": 0.03369095529992945,
+        "rmse": 0.09607144893328652,
+        "max_abs": 0.8422887978648107
+      },
+      "movable_force_component_error_eV_per_A": {
+        "mae": 0.04683864517307266,
+        "rmse": 0.11327650479786408,
+        "max_abs": 0.8422887978648107
+      },
+      "h_force_component_error_eV_per_A": {
+        "mae": 0.26267013339005507,
+        "rmse": 0.4346587049443385,
+        "max_abs": 0.8422887978648107
+      },
+      "inference_seconds": 16.849525500030722
+    }
+  ]
+}
