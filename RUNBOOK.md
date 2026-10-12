@@ -106,6 +106,63 @@ python src\eval_m1_zscan.py `
   --out artifacts\m1_5epoch\zscan
 ```
 
+## 8. MLIP-driven CI-NEB pathway estimate
+
+The NEB scripts read every local path from environment variables, which you
+set in a private `env.ps1` that is not committed. No path is stored in the repository.
+
+```powershell
+$env:NBP_DATA_DIR = "<folder with zscan.xyz and m0_benchmark.xyz>"   # sections 1 and 5
+$env:NBP_SCF_ROOT = "<path-to-extracted-03_SCF>"
+$env:NBP_MLIP_RAW_ROOT = "<path-to-curated-raw_sources>"              # optional
+$env:NBP_SOC_RELAX = "<SOC H relaxation folder with POSCAR>"         # optional, fixed-atom flags
+$env:NBP_ZPE_COLL_H = "<collinear H finite-difference (ZPE) output>"  # DFT H modes at r0
+$env:MACE_MP0_SMALL_CHECKPOINT = "<path-to-20231210mace128L0_energy_epoch249model>"
+$env:MACE_M1_CHECKPOINT = "<path-to-M1_5epoch.model>"
+```
+
+`run_neb.py` also accepts `--model-path` or `NEB_M0_MODEL` / `NEB_M1_MODEL` to
+override the checkpoint for one run.
+
+Endpoints (writes date-stamped output folders next to the scripts):
+
+```powershell
+cd src\neb\01_endpoints
+python 01_inspect_r0.py                                      # seconds
+python 02_relax_r0.py                                        # ~6 min
+python 02b_substrate_check.py --relaxed <relax_r0 folder>    # <1 min
+python 03_h_modes.py --relaxed <relax_r0 folder>             # <1 min
+python 04_pes_scan.py z                                      # a few min
+python 04_pes_scan.py xy --n 12                              # ~1 h on CPU
+python 05_relax_endpoints.py                                 # ~15 min
+```
+
+Split-band CI-NEB (B1 → T and T → B2) and the M0/M1 comparison:
+
+```powershell
+cd ..\02_neb_runs
+python run_neb.py --model M1 --nimages 9 --dry-run
+python run_neb.py --model M1 --nimages 9 --path B1T
+python run_neb.py --model M1 --nimages 9 --path TB2
+python run_neb.py --model M0 --nimages 7 --path B1T
+python run_neb.py --model M0 --nimages 7 --path TB2
+python compare_neb.py
+```
+
+Path analysis, H-only modes/ZPE, and figures:
+
+```powershell
+cd ..\03_analysis
+python path_analysis.py          # seconds
+python path_analysis.py --zpe    # ~5 min
+```
+
+Output folders are date-stamped, so on a rerun pass the new endpoint folder to
+`run_neb.py --endpoints-dir`, and update the run-folder names in `RUNS` at the top
+of `path_analysis.py`. Each band takes 7--11 min on a laptop CPU. Generated `*.extxyz` and `*.traj`
+files are coordinate-bearing and Git-ignored; the committed summaries are in
+`artifacts/neb/`.
+
 ## Data policy
 
 Raw VASP files, coordinate-bearing extxyz data, model checkpoints, and temporary

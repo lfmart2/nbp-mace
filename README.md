@@ -169,6 +169,34 @@ acceptance; the absolute-energy trade-off is reported rather than hidden.
 
 ![M1 validation history](artifacts/m1_5epoch/training_history.svg)
 
+## MLIP-driven lateral pathway estimate (CI-NEB)
+
+The r0--r8 scan is a frozen vertical cut. To exercise the potentials the way
+MLIPs are used in practice, as cheap force fields for pathway exploration, M0
+and M1 also drove a climbing-image NEB of lateral H motion with the substrate
+free and no new DFT. All numbers in this section are **MLIP pathway estimates**
+at 1 ML coverage in the 1×1 cell, not DFT-validated barriers. Full method,
+tables, and caveats are in [`docs/NEB_PATHWAY.md`](docs/NEB_PATHWAY.md).
+
+![MLIP-driven energy profile from bridge B1 through atop T to bridge B2](artifacts/neb/figures/fig_neb_energy.png)
+
+| Point (energy vs. B1) | M0 | M1 |
+|---|---:|---:|
+| Saddle S1, bridge B1 → atop T | 0.296 eV | 0.253 eV |
+| Atop T, shallow intermediate | 0.238 eV | 0.187 eV |
+| Saddle S2, atop T → bridge B2 | 0.279 eV | 0.231 eV |
+| Bridge B2 | 0.010 eV | 0.008 eV |
+
+The hollow site is the highest point on the lateral map, so H moves between
+Nb--Nb bridges through the atop site. Each saddle has one imaginary H mode. M0
+and M1 predict the same geometry along the path; fine-tuning lowers every point
+off B1 by 0.04--0.05 eV. DFT data exist only at B1, where M1 places H 0.10 A too
+low and is too stiff by up to 61% in the in-plane mode that drives the first
+saddle, so the error of these estimates is unknown and plausibly tens of
+percent. An H-only ZPE estimate keeps T as a minimum but shifts the classical
+≈ 0.25 eV estimate by an uncertain −0.02 to −0.07 eV. DFT single points at S1,
+T, S2, and B2 are the planned validation once compute access returns.
+
 ## Reproduce the DFT audit
 
 The raw VASP files remain local and are not committed. With the same directory
@@ -227,6 +255,9 @@ is verified or recalculated.
 - No molecular dynamics, reactive sampling, high-temperature stability, or
   transfer beyond the measured NbP-H configurations has been validated.
 - The available ZPE information is secondary and incomplete across states.
+- The CI-NEB path is an MLIP estimate with no DFT labels off the B1 site, at
+  1 ML coverage with collective H motion; it is not a validated barrier and
+  provides no rate constant.
 
 ## Repository map
 
@@ -239,8 +270,12 @@ src/prepare_m1.py               blocked splits and training-only reference align
 src/eval_m1.py                  controlled M0/M1 held-out comparison
 src/eval_m1_zscan.py            external r0-r8 comparison
 src/summarize_m1_training.py    training history and reproducibility hashes
+src/neb/01_endpoints/           site map, H modes, free-substrate endpoint relaxations
+src/neb/02_neb_runs/            split-band CI-NEB (run_neb.py) and M0/M1 comparison
+src/neb/03_analysis/            path geometry, H-only modes/ZPE, NEB figures
 configs/                        versioned fine-tuning configurations
 docs/M1_PROTOCOL.md             leakage controls and acceptance criteria
+docs/NEB_PATHWAY.md             MLIP-driven CI-NEB method, results, and limits
 artifacts/             small generated evidence committed to Git
 tests/                 automated scientific and parsing checks
 RUNBOOK.md             minimal reproduction commands and data policy
@@ -261,6 +296,10 @@ subject to research-group approval.
 **M0 and the five-epoch M1 study are complete.** Every numeric claim above is
 backed by a generated JSON/CSV artifact. The result supports small-data transfer
 learning experience while retaining explicit limits on generalization.
+
+**The MLIP-driven CI-NEB pathway estimate is complete as an MLIP-only result.**
+Its DFT validation (single points along the path, an H2 reference, and SOC
+versus collinear labels) is documented as future work pending compute access.
 
 ## License and citation
 

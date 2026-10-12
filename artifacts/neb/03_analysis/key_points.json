@@ -1,0 +1,310 @@
+{
+  "provenance": {
+    "date": "2026-10-10",
+    "inputs": {
+      "M1_B1T": {
+        "run": "run_2026-10-10_M1_9_B1T",
+        "file": "band_final.extxyz",
+        "sha256": "1c28c426de21d159ede99b160fc190467a8d3327c690c6b8eff0e91397cbed7e",
+        "n_images": 9
+      },
+      "M1_TB2": {
+        "run": "run_2026-10-10_M1_9_TB2",
+        "file": "band_final.extxyz",
+        "sha256": "da18d731910fa3f34fb4dfdead23a8c663afe1d60f7bf81d6b38a28a6d854f29",
+        "n_images": 9
+      },
+      "M0_B1T": {
+        "run": "run_2026-10-10_M0_7_B1T",
+        "file": "band_final.extxyz",
+        "sha256": "23deaaff9a2c85020c140b125eb428be86f48bbf3719dc39a1c8c7c6338068c1",
+        "n_images": 7
+      },
+      "M0_TB2": {
+        "run": "run_2026-10-10_M0_7_TB2_v2",
+        "file": "band_final.extxyz",
+        "sha256": "bc3987d2449e3325096936353a364b2be724b08d70fd22cad27185ca9d720e10",
+        "n_images": 7
+      }
+    },
+    "checkpoint_sha256": {
+      "M1": "fa762686badcba80a689e198eb3f46cca7972720496058bfbbbea46f1002cf8d",
+      "M0": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736"
+    },
+    "versions": {
+      "python": "3.12.13",
+      "ase": "3.29.0",
+      "numpy": "2.5.2",
+      "matplotlib": "3.11.1",
+      "mace": "0.3.16"
+    },
+    "energy_fit": {
+      "M1": "PCHIP through image energies (guide to the eye)",
+      "M0": "PCHIP through image energies (guide to the eye)"
+    },
+    "note": "MLIP pathway estimates (not DFT); 1 ML H, 1x1 cell; ZPE is H-only, sensitivity only"
+  },
+  "warnings": [],
+  "key_points": [
+    {
+      "model": "M1",
+      "point": "B1",
+      "band": "B1T",
+      "image": 0,
+      "s_H_lateral_A": 0.0,
+      "E_rel_eV": 0.0,
+      "H_height_above_topNb_A": 1.07394,
+      "d_H_topNb_A": 1.99308,
+      "d_H_Nb_1st_A": 1.99308,
+      "d_H_Nb_2nd_A": 1.99339,
+      "F_H_norm_eV_A": 0.00288,
+      "modes_cm1": [
+        544.0,
+        1231.6,
+        1447.7
+      ],
+      "mode_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "n_imaginary": 0,
+      "ZPE_H_eV": 0.19981,
+      "E_rel_ZPE_eV": 0.0
+    },
+    {
+      "model": "M1",
+      "point": "S1",
+      "band": "B1T",
+      "image": 4,
+      "s_H_lateral_A": 0.74023,
+      "E_rel_eV": 0.25269,
+      "H_height_above_topNb_A": 1.53014,
+      "d_H_topNb_A": 1.79519,
+      "d_H_Nb_1st_A": 1.79519,
+      "d_H_Nb_2nd_A": 2.86279,
+      "F_H_norm_eV_A": 0.11214,
+      "modes_cm1": [
+        -443.0,
+        330.4,
+        1826.8
+      ],
+      "mode_axes": [
+        "y",
+        "x",
+        "z"
+      ],
+      "n_imaginary": 1,
+      "ZPE_H_eV": 0.13373,
+      "E_rel_ZPE_eV": 0.18661
+    },
+    {
+      "model": "M1",
+      "point": "T",
+      "band": "B1T",
+      "image": 8,
+      "s_H_lateral_A": 1.6731,
+      "E_rel_eV": 0.18651,
+      "H_height_above_topNb_A": 1.75251,
+      "d_H_topNb_A": 1.75252,
+      "d_H_Nb_1st_A": 1.75252,
+      "d_H_Nb_2nd_A": 3.78275,
+      "F_H_norm_eV_A": 0.00221,
+      "modes_cm1": [
+        245.4,
+        263.1,
+        1723.5
+      ],
+      "mode_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "n_imaginary": 0,
+      "ZPE_H_eV": 0.13836,
+      "E_rel_ZPE_eV": 0.12506
+    },
+    {
+      "model": "M1",
+      "point": "S2",
+      "band": "TB2",
+      "image": 4,
+      "s_H_lateral_A": 2.5349,
+      "E_rel_eV": 0.23092,
+      "H_height_above_topNb_A": 1.56022,
+      "d_H_topNb_A": 1.78018,
+      "d_H_Nb_1st_A": 1.78018,
+      "d_H_Nb_2nd_A": 2.94792,
+      "F_H_norm_eV_A": 0.11814,
+      "modes_cm1": [
+        -370.7,
+        338.0,
+        1816.7
+      ],
+      "mode_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "n_imaginary": 1,
+      "ZPE_H_eV": 0.13357,
+      "E_rel_ZPE_eV": 0.16468
+    },
+    {
+      "model": "M1",
+      "point": "B2",
+      "band": "TB2",
+      "image": 8,
+      "s_H_lateral_A": 3.35723,
+      "E_rel_eV": 0.00811,
+      "H_height_above_topNb_A": 1.08057,
+      "d_H_topNb_A": 1.99656,
+      "d_H_Nb_1st_A": 1.99656,
+      "d_H_Nb_2nd_A": 1.99707,
+      "F_H_norm_eV_A": 0.00143,
+      "modes_cm1": [
+        571.6,
+        1099.0,
+        1448.8
+      ],
+      "mode_axes": [
+        "y",
+        "x",
+        "z"
+      ],
+      "n_imaginary": 0,
+      "ZPE_H_eV": 0.19338,
+      "E_rel_ZPE_eV": 0.00167
+    },
+    {
+      "model": "M0",
+      "point": "B1",
+      "band": "B1T",
+      "image": 0,
+      "s_H_lateral_A": 0.0,
+      "E_rel_eV": 0.0,
+      "H_height_above_topNb_A": 1.06731,
+      "d_H_topNb_A": 1.98957,
+      "d_H_Nb_1st_A": 1.98957,
+      "d_H_Nb_2nd_A": 1.98979,
+      "F_H_norm_eV_A": 0.00193,
+      "modes_cm1": [
+        542.4,
+        1282.6,
+        1492.5
+      ],
+      "mode_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "n_imaginary": 0,
+      "ZPE_H_eV": 0.20566,
+      "E_rel_ZPE_eV": 0.0
+    },
+    {
+      "model": "M0",
+      "point": "S1",
+      "band": "B1T",
+      "image": 3,
+      "s_H_lateral_A": 0.77887,
+      "E_rel_eV": 0.29562,
+      "H_height_above_topNb_A": 1.54506,
+      "d_H_topNb_A": 1.78817,
+      "d_H_Nb_1st_A": 1.78817,
+      "d_H_Nb_2nd_A": 2.90342,
+      "F_H_norm_eV_A": 0.12151,
+      "modes_cm1": [
+        -427.6,
+        323.4,
+        1844.1
+      ],
+      "mode_axes": [
+        "y",
+        "x",
+        "z"
+      ],
+      "n_imaginary": 1,
+      "ZPE_H_eV": 0.13437,
+      "E_rel_ZPE_eV": 0.22433
+    },
+    {
+      "model": "M0",
+      "point": "T",
+      "band": "B1T",
+      "image": 6,
+      "s_H_lateral_A": 1.67029,
+      "E_rel_eV": 0.23786,
+      "H_height_above_topNb_A": 1.75177,
+      "d_H_topNb_A": 1.7518,
+      "d_H_Nb_1st_A": 1.7518,
+      "d_H_Nb_2nd_A": 3.77994,
+      "F_H_norm_eV_A": 0.00268,
+      "modes_cm1": [
+        245.3,
+        255.3,
+        1730.9
+      ],
+      "mode_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "n_imaginary": 0,
+      "ZPE_H_eV": 0.13834,
+      "E_rel_ZPE_eV": 0.17053
+    },
+    {
+      "model": "M0",
+      "point": "S2",
+      "band": "TB2",
+      "image": 3,
+      "s_H_lateral_A": 2.52332,
+      "E_rel_eV": 0.27923,
+      "H_height_above_topNb_A": 1.56336,
+      "d_H_topNb_A": 1.77761,
+      "d_H_Nb_1st_A": 1.77761,
+      "d_H_Nb_2nd_A": 2.95902,
+      "F_H_norm_eV_A": 0.12378,
+      "modes_cm1": [
+        -383.5,
+        331.6,
+        1835.6
+      ],
+      "mode_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "n_imaginary": 1,
+      "ZPE_H_eV": 0.13435,
+      "E_rel_ZPE_eV": 0.20791
+    },
+    {
+      "model": "M0",
+      "point": "B2",
+      "band": "TB2",
+      "image": 6,
+      "s_H_lateral_A": 3.35673,
+      "E_rel_eV": 0.00966,
+      "H_height_above_topNb_A": 1.07393,
+      "d_H_topNb_A": 1.993,
+      "d_H_Nb_1st_A": 1.993,
+      "d_H_Nb_2nd_A": 1.99347,
+      "F_H_norm_eV_A": 0.00136,
+      "modes_cm1": [
+        570.0,
+        1165.1,
+        1497.7
+      ],
+      "mode_axes": [
+        "y",
+        "x",
+        "z"
+      ],
+      "n_imaginary": 0,
+      "ZPE_H_eV": 0.20041,
+      "E_rel_ZPE_eV": 0.00441
+    }
+  ]
+}

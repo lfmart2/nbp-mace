@@ -1,0 +1,204 @@
+{
+  "framing": "MLIP pathway estimate (MACE), not DFT-validated; 1 ML H, 1x1 cell",
+  "args": {
+    "model": "M1",
+    "model_path": null,
+    "nimages": 7,
+    "path": "TB2",
+    "k": 0.1,
+    "optimizer": "fire",
+    "fmax1": 0.03,
+    "fmax2": 0.01,
+    "steps": 1500,
+    "fd_delta": 0.01,
+    "endpoints_dir": "local://2026-10-09_endpoints",
+    "tag": "",
+    "dry_run": false
+  },
+  "provenance": {
+    "date": "2026-10-10T12:18:16",
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "ase": "3.29.0",
+    "numpy": "2.5.2",
+    "model": "M1",
+    "model_path": "local://M1_5epoch.model",
+    "torch": "2.13.0+cpu",
+    "torch_threads": 10,
+    "mace": "0.3.16",
+    "model_sha256": "fa762686badcba80a689e198eb3f46cca7972720496058bfbbbea46f1002cf8d"
+  },
+  "setup_checks": {
+    "n_atoms": 57,
+    "H_index": 0,
+    "top_Nb_index": 1,
+    "fixed_atoms": 16,
+    "fixed_source": "from file",
+    "cell_a_A": 3.3583631516,
+    "cell_b_A": 3.3583631516,
+    "B2_H_offset_from_expected_A": 0.0008768728398276665,
+    "B2_H_lattice_shift_applied_A": 0.0,
+    "T_waypoint_source": "relaxed M1_T.extxyz",
+    "T_H_offset_from_expected_A": 0.007497447305316822,
+    "T_xy_to_topNb_A": 0.0011221806875835632,
+    "fixed_atoms_max_diff_B1_B2_A": 0.0,
+    "free_substrate_max_disp_B1_B2_A": 0.02082192358219006
+  },
+  "E_B1_abs_eV": -491.30791179571486,
+  "initial_band_E_rel_B1_eV": [
+    0.18651311052622077,
+    0.24424131994840081,
+    0.33377985512970554,
+    0.35556831493670416,
+    0.2566613937403872,
+    0.09926981847604566,
+    0.008108634060249642
+  ],
+  "endpoint_fmax_eV_per_A": [
+    0.004397368497034717,
+    0.004669609522282601
+  ],
+  "cost_estimate": {
+    "seconds_per_force_call": 1.6728854799992405,
+    "seconds_per_neb_step": 8.364427399996202,
+    "phase1_minutes_range(150-600 steps)": [
+      20.911068499990506,
+      83.64427399996202
+    ],
+    "phase2_minutes_range(100-400 steps)": [
+      13.940712333327005,
+      55.76284933330802
+    ]
+  },
+  "phases": [
+    {
+      "phase": "phase1_neb",
+      "fmax_target": 0.03,
+      "steps": 33,
+      "final_max_force": 0.0267404860195462,
+      "converged": true,
+      "minutes": 3.983791740000015
+    },
+    {
+      "phase": "phase2_ci",
+      "fmax_target": 0.01,
+      "steps": 24,
+      "final_max_force": 0.008196525374662816,
+      "converged": true,
+      "minutes": 2.9413061150000432
+    }
+  ],
+  "result": {
+    "framing": "MLIP pathway estimate (MACE), not DFT-validated; 1 ML H, 1x1 cell",
+    "barrier_images_eV": 0.043747220105217366,
+    "barrier_fit_eV": 0.04374722010521742,
+    "reaction_energy_eV": -0.17840447646597113,
+    "climbing_image": 3,
+    "interior_maxima": [
+      3
+    ],
+    "interior_minima": [],
+    "T_intermediate_found": false,
+    "saddle_imaginary_H_modes": 1,
+    "endpoint_fmax_eV_per_A": [
+      0.004397368497034717,
+      0.004669609522282601
+    ],
+    "endpoint_max_position_change_A": 0.0,
+    "h_modes": {
+      "3": {
+        "kind": "highest image (CI)",
+        "modes": [
+          {
+            "freq_cm-1": -374.63914171936887,
+            "k_eV_per_A2": -0.5202674729167678,
+            "dominant_axis": "x",
+            "eigvec_xyz": [
+              -0.9110600364357816,
+              5.637609742925598e-05,
+              -0.4122737037835032
+            ]
+          },
+          {
+            "freq_cm-1": 340.4832345285613,
+            "k_eV_per_A2": 0.4297262059875819,
+            "dominant_axis": "y",
+            "eigvec_xyz": [
+              3.089080391842028e-05,
+              0.9999999971780881,
+              6.848052657115744e-05
+            ]
+          },
+          {
+            "freq_cm-1": 1816.9895404987324,
+            "k_eV_per_A2": 12.237852927998913,
+            "dominant_axis": "z",
+            "eigvec_xyz": [
+              -0.4122737064807677,
+              -4.965440488913231e-05,
+              0.9110600356063535
+            ]
+          }
+        ]
+      }
+    },
+    "images": [
+      {
+        "image": 0,
+        "E_rel_first_eV": 0.0,
+        "E_rel_B1_eV": 0.18651311052622077,
+        "H_dxy_to_topNb_A": 0.007609044505934999,
+        "H_height_above_topNb_A": 1.752507940000001,
+        "true_fmax_free_eV_per_A": 0.004397368497034717
+      },
+      {
+        "image": 1,
+        "E_rel_first_eV": 0.005845499806525822,
+        "E_rel_B1_eV": 0.1923586103327466,
+        "H_dxy_to_topNb_A": 0.22012815386817478,
+        "H_height_above_topNb_A": 1.7400030561439905,
+        "true_fmax_free_eV_per_A": 0.040765810564642235
+      },
+      {
+        "image": 2,
+        "E_rel_first_eV": 0.025786067731246476,
+        "E_rel_B1_eV": 0.21229917825746725,
+        "H_dxy_to_topNb_A": 0.5286314893536755,
+        "H_height_above_topNb_A": 1.6802604360217686,
+        "true_fmax_free_eV_per_A": 0.07184898201700599
+      },
+      {
+        "image": 3,
+        "E_rel_first_eV": 0.043747220105217366,
+        "E_rel_B1_eV": 0.23026033063143814,
+        "H_dxy_to_topNb_A": 0.8629116471664523,
+        "H_height_above_topNb_A": 1.5582805321618736,
+        "true_fmax_free_eV_per_A": 0.0024876357521213146
+      },
+      {
+        "image": 4,
+        "E_rel_first_eV": -0.015443477766496017,
+        "E_rel_B1_eV": 0.17106963275972475,
+        "H_dxy_to_topNb_A": 1.221365480044186,
+        "H_height_above_topNb_A": 1.3583935048435478,
+        "true_fmax_free_eV_per_A": 0.3288877047190192
+      },
+      {
+        "image": 5,
+        "E_rel_first_eV": -0.15034134387678932,
+        "E_rel_B1_eV": 0.03617176664943145,
+        "H_dxy_to_topNb_A": 1.5862873086321014,
+        "H_height_above_topNb_A": 1.1243860871034457,
+        "true_fmax_free_eV_per_A": 0.3225302953259072
+      },
+      {
+        "image": 6,
+        "E_rel_first_eV": -0.17840447646597113,
+        "E_rel_B1_eV": 0.008108634060249642,
+        "H_dxy_to_topNb_A": 1.6788789893459428,
+        "H_height_above_topNb_A": 1.0805658000000022,
+        "true_fmax_free_eV_per_A": 0.004669609522282601
+      }
+    ]
+  }
+}

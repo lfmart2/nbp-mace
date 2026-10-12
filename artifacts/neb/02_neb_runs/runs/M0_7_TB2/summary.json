@@ -1,0 +1,204 @@
+{
+  "framing": "MLIP pathway estimate (MACE), not DFT-validated; 1 ML H, 1x1 cell",
+  "args": {
+    "model": "M0",
+    "model_path": null,
+    "nimages": 7,
+    "path": "TB2",
+    "k": 0.1,
+    "optimizer": "fire",
+    "fmax1": 0.03,
+    "fmax2": 0.01,
+    "steps": 1500,
+    "fd_delta": 0.01,
+    "endpoints_dir": "local://2026-10-09_endpoints",
+    "tag": "",
+    "dry_run": false
+  },
+  "provenance": {
+    "date": "2026-10-10T17:18:52",
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "ase": "3.29.0",
+    "numpy": "2.5.2",
+    "model": "M0",
+    "model_path": "local://20231210mace128L0_energy_epoch249model",
+    "torch": "2.13.0+cpu",
+    "torch_threads": 10,
+    "mace": "0.3.16",
+    "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736"
+  },
+  "setup_checks": {
+    "n_atoms": 57,
+    "H_index": 0,
+    "top_Nb_index": 1,
+    "fixed_atoms": 16,
+    "fixed_source": "from file",
+    "cell_a_A": 3.3583631516,
+    "cell_b_A": 3.3583631516,
+    "B2_H_offset_from_expected_A": 0.0006579501373473488,
+    "B2_H_lattice_shift_applied_A": 0.0,
+    "T_waypoint_source": "relaxed M0_T.extxyz",
+    "T_H_offset_from_expected_A": 0.010132467977438955,
+    "T_xy_to_topNb_A": 0.0007274503145684534,
+    "fixed_atoms_max_diff_B1_B2_A": 0.0,
+    "free_substrate_max_disp_B1_B2_A": 0.023435511618719287
+  },
+  "E_B1_abs_eV": -489.0747345273221,
+  "initial_band_E_rel_B1_eV": [
+    0.23786133775257667,
+    0.29671029182486564,
+    0.3879955724070214,
+    0.4084157042104266,
+    0.29772594971473154,
+    0.11695548703539771,
+    0.009664085493739094
+  ],
+  "endpoint_fmax_eV_per_A": [
+    0.004532678363784259,
+    0.003340210365806165
+  ],
+  "cost_estimate": {
+    "seconds_per_force_call": 1.8755677599925549,
+    "seconds_per_neb_step": 9.377838799962774,
+    "phase1_minutes_range(150-600 steps)": [
+      23.444596999906935,
+      93.77838799962774
+    ],
+    "phase2_minutes_range(100-400 steps)": [
+      15.62973133327129,
+      62.51892533308516
+    ]
+  },
+  "phases": [
+    {
+      "phase": "phase1_neb",
+      "fmax_target": 0.03,
+      "steps": 34,
+      "final_max_force": 0.025576815200339706,
+      "converged": true,
+      "minutes": 4.289519510000051
+    },
+    {
+      "phase": "phase2_ci",
+      "fmax_target": 0.01,
+      "steps": 12,
+      "final_max_force": 0.008327546839833413,
+      "converged": true,
+      "minutes": 2.434240863333495
+    }
+  ],
+  "result": {
+    "framing": "MLIP pathway estimate (MACE), not DFT-validated; 1 ML H, 1x1 cell",
+    "barrier_images_eV": 0.04078872300846115,
+    "barrier_fit_eV": 0.04079725581844722,
+    "reaction_energy_eV": -0.22819725225883758,
+    "climbing_image": 3,
+    "interior_maxima": [
+      3
+    ],
+    "interior_minima": [],
+    "T_intermediate_found": false,
+    "saddle_imaginary_H_modes": 1,
+    "endpoint_fmax_eV_per_A": [
+      0.004532678363784259,
+      0.003340210365806165
+    ],
+    "endpoint_max_position_change_A": 0.0,
+    "h_modes": {
+      "3": {
+        "kind": "highest image (CI)",
+        "modes": [
+          {
+            "freq_cm-1": -383.5229169670585,
+            "k_eV_per_A2": -0.5452341063356976,
+            "dominant_axis": "x",
+            "eigvec_xyz": [
+              0.9131826372267208,
+              0.0006655551707884233,
+              0.4075500314120542
+            ]
+          },
+          {
+            "freq_cm-1": 331.56218658511585,
+            "k_eV_per_A2": 0.4075025822859147,
+            "dominant_axis": "y",
+            "eigvec_xyz": [
+              0.0003765732789141917,
+              -0.9999996176076865,
+              0.0007892889499303557
+            ]
+          },
+          {
+            "freq_cm-1": 1835.5987808275422,
+            "k_eV_per_A2": 12.48981185247122,
+            "dominant_axis": "z",
+            "eigvec_xyz": [
+              -0.40755040088339667,
+              0.0005672925131808837,
+              0.9131825386629923
+            ]
+          }
+        ]
+      }
+    },
+    "images": [
+      {
+        "image": 0,
+        "E_rel_first_eV": 0.0,
+        "E_rel_B1_eV": 0.23786133775257667,
+        "H_dxy_to_topNb_A": 0.011232996800805183,
+        "H_height_above_topNb_A": 1.7517653799999948,
+        "true_fmax_free_eV_per_A": 0.004532678363784259
+      },
+      {
+        "image": 1,
+        "E_rel_first_eV": 0.006677649020048193,
+        "E_rel_B1_eV": 0.24453898677262487,
+        "H_dxy_to_topNb_A": 0.24856120536695003,
+        "H_height_above_topNb_A": 1.7356102131835485,
+        "true_fmax_free_eV_per_A": 0.04533621424967623
+      },
+      {
+        "image": 2,
+        "E_rel_first_eV": 0.02579386760385205,
+        "E_rel_B1_eV": 0.2636552053564287,
+        "H_dxy_to_topNb_A": 0.5410028251307912,
+        "H_height_above_topNb_A": 1.6750997801257341,
+        "true_fmax_free_eV_per_A": 0.06942014680921706
+      },
+      {
+        "image": 3,
+        "E_rel_first_eV": 0.04078872300846115,
+        "E_rel_B1_eV": 0.2786500607610378,
+        "H_dxy_to_topNb_A": 0.8460524201529906,
+        "H_height_above_topNb_A": 1.5633607484679004,
+        "true_fmax_free_eV_per_A": 0.011087169106894515
+      },
+      {
+        "image": 4,
+        "E_rel_first_eV": -0.030629856619611928,
+        "E_rel_B1_eV": 0.20723148113296475,
+        "H_dxy_to_topNb_A": 1.2180329577439504,
+        "H_height_above_topNb_A": 1.3562454185262993,
+        "true_fmax_free_eV_per_A": 0.3891423029737112
+      },
+      {
+        "image": 5,
+        "E_rel_first_eV": -0.18757884728847785,
+        "E_rel_B1_eV": 0.05028249046409883,
+        "H_dxy_to_topNb_A": 1.5709068000533097,
+        "H_height_above_topNb_A": 1.1282824723345044,
+        "true_fmax_free_eV_per_A": 0.39131288027393907
+      },
+      {
+        "image": 6,
+        "E_rel_first_eV": -0.22819725225883758,
+        "E_rel_B1_eV": 0.009664085493739094,
+        "H_dxy_to_topNb_A": 1.6789055268703867,
+        "H_height_above_topNb_A": 1.0739298100000099,
+        "true_fmax_free_eV_per_A": 0.003340210365806165
+      }
+    ]
+  }
+}

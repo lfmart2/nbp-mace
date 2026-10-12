@@ -1,0 +1,294 @@
+{
+  "provenance": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "date": "2026-10-09T15:58:44",
+    "numpy": "2.5.2",
+    "ase": "3.29.0",
+    "torch": "2.13.0+cpu",
+    "mace": "0.3.16"
+  },
+  "grid_n": 12,
+  "grid_origin_frac": [
+    0.5000055196651354,
+    0.9939806458421958
+  ],
+  "protocol": "H x,y fixed, H z relaxed; substrate frozen at DFT r0",
+  "fixed_atoms": "all substrate",
+  "models": {
+    "M0": {
+      "E_min_eV": -489.04989730344533,
+      "E_max_rel_eV": 1.1309836882069817,
+      "n_not_converged": 0,
+      "minima": [
+        {
+          "id": 0,
+          "i": 0,
+          "j": 0,
+          "frac": [
+            0.5000055196651354,
+            0.9939806458421958
+          ],
+          "xy_A": [
+            1.6792001128399998,
+            3.3381479744
+          ],
+          "E_rel_eV": 0.0,
+          "height_A": 1.0674140406620864,
+          "site": "bridge (L1 Nb-Nb)",
+          "nearest_projected": [
+            {
+              "layer": 1,
+              "species": "Nb",
+              "lateral_distance_A": 1.6783644551601207
+            },
+            {
+              "layer": 2,
+              "species": "P",
+              "lateral_distance_A": 1.6791757440668713
+            },
+            {
+              "layer": 3,
+              "species": "Nb",
+              "lateral_distance_A": 2.3724242318389277
+            },
+            {
+              "layer": 4,
+              "species": "P",
+              "lateral_distance_A": 0.003475792430542895
+            }
+          ],
+          "is_r0_site": true
+        },
+        {
+          "id": 1,
+          "i": 0,
+          "j": 6,
+          "frac": [
+            0.5000055196651354,
+            0.4939806458421958
+          ],
+          "xy_A": [
+            1.6792001128399998,
+            1.6589663986
+          ],
+          "E_rel_eV": 0.2826319154861494,
+          "height_A": 1.7518262806907359,
+          "site": "top (above L1 Nb)",
+          "nearest_projected": [
+            {
+              "layer": 1,
+              "species": "Nb",
+              "lateral_distance_A": 0.0008171414369323294
+            },
+            {
+              "layer": 2,
+              "species": "P",
+              "lateral_distance_A": 2.37366999951478
+            },
+            {
+              "layer": 3,
+              "species": "Nb",
+              "lateral_distance_A": 1.6791723598623822
+            },
+            {
+              "layer": 4,
+              "species": "P",
+              "lateral_distance_A": 1.6757058072786903
+            }
+          ],
+          "is_r0_site": false
+        },
+        {
+          "id": 2,
+          "i": 6,
+          "j": 6,
+          "frac": [
+            5.5196651354005866e-06,
+            0.4939806458421958
+          ],
+          "xy_A": [
+            1.8537039999900553e-05,
+            1.6589663986
+          ],
+          "E_rel_eV": 0.014892932320776708,
+          "height_A": 1.0756206055829693,
+          "site": "bridge (L1 Nb-Nb)",
+          "nearest_projected": [
+            {
+              "layer": 1,
+              "species": "Nb",
+              "lateral_distance_A": 1.6791759461236497
+            },
+            {
+              "layer": 2,
+              "species": "P",
+              "lateral_distance_A": 1.6777008909825315
+            },
+            {
+              "layer": 3,
+              "species": "Nb",
+              "lateral_distance_A": 0.0032378635857654597
+            },
+            {
+              "layer": 4,
+              "species": "P",
+              "lateral_distance_A": 2.3722557757334424
+            }
+          ],
+          "is_r0_site": false
+        }
+      ],
+      "grid_minimax_barriers_eV": {
+        "1->2": 0.02848797439844475,
+        "2->1": 0.29622695756381745,
+        "1->image": 0.028489485461932418,
+        "2->image": 0.2962284686273051,
+        "0->1": 0.32094425593146525,
+        "0->2": 0.32094425593146525,
+        "1->0": 0.03831234044531584,
+        "2->0": 0.30605132361068854,
+        "0->image": 0.32094425593146525
+      },
+      "r0_site_E_rel_eV": 0.0,
+      "r0_site_height_A": 1.0674140406620864
+    },
+    "M1": {
+      "E_min_eV": -491.28088458663126,
+      "E_max_rel_eV": 1.111835763239469,
+      "n_not_converged": 0,
+      "minima": [
+        {
+          "id": 0,
+          "i": 0,
+          "j": 0,
+          "frac": [
+            0.5000055196651354,
+            0.9939806458421958
+          ],
+          "xy_A": [
+            1.6792001128399998,
+            3.3381479744
+          ],
+          "E_rel_eV": 0.0,
+          "height_A": 1.072304031141087,
+          "site": "bridge (L1 Nb-Nb)",
+          "nearest_projected": [
+            {
+              "layer": 1,
+              "species": "Nb",
+              "lateral_distance_A": 1.6783644551601207
+            },
+            {
+              "layer": 2,
+              "species": "P",
+              "lateral_distance_A": 1.6791757440668713
+            },
+            {
+              "layer": 3,
+              "species": "Nb",
+              "lateral_distance_A": 2.3724242318389277
+            },
+            {
+              "layer": 4,
+              "species": "P",
+              "lateral_distance_A": 0.003475792430542895
+            }
+          ],
+          "is_r0_site": true
+        },
+        {
+          "id": 1,
+          "i": 0,
+          "j": 6,
+          "frac": [
+            0.5000055196651354,
+            0.4939806458421958
+          ],
+          "xy_A": [
+            1.6792001128399998,
+            1.6589663986
+          ],
+          "E_rel_eV": 0.23638378789138415,
+          "height_A": 1.7505748895299291,
+          "site": "top (above L1 Nb)",
+          "nearest_projected": [
+            {
+              "layer": 1,
+              "species": "Nb",
+              "lateral_distance_A": 0.0008171414369323294
+            },
+            {
+              "layer": 2,
+              "species": "P",
+              "lateral_distance_A": 2.37366999951478
+            },
+            {
+              "layer": 3,
+              "species": "Nb",
+              "lateral_distance_A": 1.6791723598623822
+            },
+            {
+              "layer": 4,
+              "species": "P",
+              "lateral_distance_A": 1.6757058072786903
+            }
+          ],
+          "is_r0_site": false
+        },
+        {
+          "id": 2,
+          "i": 6,
+          "j": 6,
+          "frac": [
+            5.5196651354005866e-06,
+            0.4939806458421958
+          ],
+          "xy_A": [
+            1.8537039999900553e-05,
+            1.6589663986
+          ],
+          "E_rel_eV": 0.008698724063947338,
+          "height_A": 1.0786259681094492,
+          "site": "bridge (L1 Nb-Nb)",
+          "nearest_projected": [
+            {
+              "layer": 1,
+              "species": "Nb",
+              "lateral_distance_A": 1.6791759461236497
+            },
+            {
+              "layer": 2,
+              "species": "P",
+              "lateral_distance_A": 1.6777008909825315
+            },
+            {
+              "layer": 3,
+              "species": "Nb",
+              "lateral_distance_A": 0.0032378635857654597
+            },
+            {
+              "layer": 4,
+              "species": "P",
+              "lateral_distance_A": 2.3722557757334424
+            }
+          ],
+          "is_r0_site": false
+        }
+      ],
+      "grid_minimax_barriers_eV": {
+        "1->2": 0.030341409503876093,
+        "2->1": 0.2580264733313129,
+        "1->image": 0.030342757102232554,
+        "2->image": 0.25802782092966936,
+        "1->0": 0.041667792218220256,
+        "2->0": 0.26935285604565706,
+        "0->image": 0.2780515801096044,
+        "0->1": 0.2780515801096044,
+        "0->2": 0.2780515801096044
+      },
+      "r0_site_E_rel_eV": 0.0,
+      "r0_site_height_A": 1.072304031141087
+    }
+  }
+}

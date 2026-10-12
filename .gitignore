@@ -2,8 +2,17 @@
 data/
 data_smoke/
 *.xyz
+*.extxyz
+*.traj
+run.log
 manifest.json
 tree.json
+
+# NEB reproduction outputs written next to the scripts (summaries live in artifacts/neb/)
+src/neb/**/20??-??-??_*/
+src/neb/**/run_*/
+src/neb/**/compare_*/
+src/neb/04_figures/
 
 # MACE training artefacts
 checkpoints/

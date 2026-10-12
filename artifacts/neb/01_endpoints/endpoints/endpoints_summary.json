@@ -1,0 +1,122 @@
+{
+  "provenance": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "date": "2026-10-09T17:12:53",
+    "numpy": "2.5.2",
+    "ase": "3.29.0",
+    "torch": "2.13.0+cpu",
+    "mace": "0.3.16"
+  },
+  "fixed_atoms": {
+    "source": "SOC H relaxation (origin of r0 geometry)",
+    "path": "local://POSCAR",
+    "max_match_distance_A": 0.08034605594830174,
+    "n_fixed": 16,
+    "n_partially_fixed_in_poscar": 0
+  },
+  "fmax_eV_A": 0.005,
+  "sites": {
+    "B1": {
+      "frac_offset_from_r0_H": [
+        0.0,
+        0.0
+      ],
+      "start_height_A": 1.1
+    },
+    "T": {
+      "frac_offset_from_r0_H": [
+        0.0,
+        -0.5
+      ],
+      "start_height_A": 1.75
+    },
+    "B2": {
+      "frac_offset_from_r0_H": [
+        -0.5,
+        -0.5
+      ],
+      "start_height_A": 1.1
+    }
+  },
+  "models": {
+    "M0": {
+      "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+      "B1": {
+        "E_eV": -489.0747345266709,
+        "converged": true,
+        "steps": 89,
+        "fmax_final_eV_A": 0.0049011695214224976,
+        "H_lateral_drift_from_site_A": 0.01992019358025801,
+        "H_height_A": 1.0673130611968986,
+        "H_site_final": "bridge (L1 Nb-Nb) over L4 P",
+        "H_nearest_A": 1.989565515947907,
+        "seconds": 120.4305637999787,
+        "E_rel_B1_eV": 0.0
+      },
+      "T": {
+        "E_eV": -488.83687318897137,
+        "converged": true,
+        "steps": 98,
+        "fmax_final_eV_A": 0.004532625267448127,
+        "H_lateral_drift_from_site_A": 0.029370216092604304,
+        "H_height_A": 1.75176538530728,
+        "H_site_final": "top (above L1 Nb)",
+        "H_nearest_A": 1.7518014000644444,
+        "seconds": 242.45326899999054,
+        "E_rel_B1_eV": 0.23786133769954176
+      },
+      "B2": {
+        "E_eV": -489.06507044119763,
+        "converged": true,
+        "steps": 92,
+        "fmax_final_eV_A": 0.003340201440324643,
+        "H_lateral_drift_from_site_A": 0.02040942851564185,
+        "H_height_A": 1.073929809135251,
+        "H_site_final": "bridge (L1 Nb-Nb) over L3 Nb",
+        "H_nearest_A": 1.9929999956069722,
+        "seconds": 191.21729630004847,
+        "E_rel_B1_eV": 0.009664085473275463
+      }
+    },
+    "M1": {
+      "checkpoint_sha256": "fa762686badcba80a689e198eb3f46cca7972720496058bfbbbea46f1002cf8d",
+      "B1": {
+        "E_eV": -491.3079117946242,
+        "converged": true,
+        "steps": 94,
+        "fmax_final_eV_A": 0.0037023235431594055,
+        "H_lateral_drift_from_site_A": 0.02024669093603295,
+        "H_height_A": 1.073941002102785,
+        "H_site_final": "bridge (L1 Nb-Nb) over L4 P",
+        "H_nearest_A": 1.9930843195771537,
+        "seconds": 130.3267751999665,
+        "E_rel_B1_eV": 0.0
+      },
+      "T": {
+        "E_eV": -491.1213986840439,
+        "converged": true,
+        "steps": 99,
+        "fmax_final_eV_A": 0.004397311585890178,
+        "H_lateral_drift_from_site_A": 0.027620672106359427,
+        "H_height_A": 1.7525079461165944,
+        "H_site_final": "top (above L1 Nb)",
+        "H_nearest_A": 1.7525244645470406,
+        "seconds": 141.51901550003095,
+        "E_rel_B1_eV": 0.18651311058027886
+      },
+      "B2": {
+        "E_eV": -491.2998031605561,
+        "converged": true,
+        "steps": 93,
+        "fmax_final_eV_A": 0.004669626023632463,
+        "H_lateral_drift_from_site_A": 0.020318731435268,
+        "H_height_A": 1.0805657944315215,
+        "H_site_final": "bridge (L1 Nb-Nb) over L3 Nb",
+        "H_nearest_A": 1.9965613115272816,
+        "seconds": 137.9214961999678,
+        "E_rel_B1_eV": 0.008108634068094034
+      }
+    }
+  }
+}

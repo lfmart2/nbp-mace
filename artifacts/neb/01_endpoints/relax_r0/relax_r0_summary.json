@@ -1,0 +1,256 @@
+{
+  "provenance": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "date": "2026-10-09T15:27:12",
+    "numpy": "2.5.2",
+    "ase": "3.29.0",
+    "torch": "2.13.0+cpu",
+    "mace": "0.3.16"
+  },
+  "fixed_atoms": {
+    "source": "SOC H relaxation (origin of r0 geometry)",
+    "path": "local://POSCAR",
+    "max_match_distance_A": 0.08034605594830174,
+    "n_fixed": 16,
+    "n_partially_fixed_in_poscar": 0
+  },
+  "free_substrate_layers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "fmax_target_eV_A": 0.01,
+  "H_height_DFT_r0_A": 1.1731170247999927,
+  "H_site_DFT_r0": "bridge (L1 Nb-Nb)",
+  "dft_H_force_r0_eV_A": [
+    -1.4e-05,
+    0.00205,
+    0.000248
+  ],
+  "models": {
+    "M0": {
+      "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+      "H_force_at_DFT_r0_eV_A": [
+        -7.990230660136793e-06,
+        0.001665188542369002,
+        -0.7671318308901849
+      ],
+      "slab": {
+        "E_initial_eV": -484.7797820530035,
+        "E_final_eV": -484.8425347908796,
+        "dE_eV": -0.06275273787611013,
+        "fmax_initial_eV_A": 0.8092101138025027,
+        "fmax_final_eV_A": 0.009566252598931426,
+        "steps": 39,
+        "converged": true,
+        "seconds": 46.302810100023635,
+        "max_substrate_disp_A": 0.14450223987984834,
+        "max_substrate_disp_atom": "P28",
+        "max_substrate_disp_layer": 2,
+        "max_disp_by_top_layer_A": {
+          "1": 0.015609828548131739,
+          "2": 0.14450223987984834,
+          "3": 0.04357863352189047,
+          "4": 0.08075865142720855,
+          "5": 0.057668049955642134,
+          "6": 0.06461921996981904
+        }
+      },
+      "h_only": {
+        "E_initial_eV": -489.0071584998402,
+        "E_final_eV": -489.04989855805553,
+        "dE_eV": -0.04274005821531546,
+        "fmax_initial_eV_A": 0.7671336382154368,
+        "fmax_final_eV_A": 0.00589904061332462,
+        "steps": 3,
+        "converged": true,
+        "seconds": 3.9607272000284865,
+        "max_substrate_disp_A": 0.0,
+        "max_substrate_disp_atom": "Nb1",
+        "max_substrate_disp_layer": 1,
+        "max_disp_by_top_layer_A": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0
+        },
+        "H_disp_xyz_A": [
+          -1.2044038673053592e-06,
+          0.000351260723335578,
+          -0.1056171864049702
+        ],
+        "H_disp_A": 0.10561777052015711,
+        "H_lateral_disp_A": 0.0003512627881613836,
+        "H_height_final_A": 1.0674998383950225,
+        "H_height_above_L1_mean_A": 1.0674998383950225,
+        "H_site_final": "bridge (L1 Nb-Nb)",
+        "H_nearest_neighbour": "Nb1 1.989 A"
+      },
+      "full": {
+        "E_initial_eV": -489.0071584998402,
+        "E_final_eV": -489.07294839253257,
+        "dE_eV": -0.0657898926923508,
+        "fmax_initial_eV_A": 0.7671336382154368,
+        "fmax_final_eV_A": 0.009838579088351203,
+        "steps": 40,
+        "converged": true,
+        "seconds": 53.77643129997887,
+        "max_substrate_disp_A": 0.09397877245206247,
+        "max_substrate_disp_atom": "P29",
+        "max_substrate_disp_layer": 2,
+        "max_disp_by_top_layer_A": {
+          "1": 0.08199424113766202,
+          "2": 0.09397877245206247,
+          "3": 0.047886871585303366,
+          "4": 0.08149952767740569,
+          "5": 0.05538218319718677,
+          "6": 0.06306316688295995
+        },
+        "H_disp_xyz_A": [
+          -2.115698645654973e-05,
+          0.01713822056158998,
+          -0.025673157099106447
+        ],
+        "H_disp_A": 0.03086794530044365,
+        "H_lateral_disp_A": 0.017138233620644264,
+        "H_height_final_A": 1.0672011483196542,
+        "H_height_above_L1_mean_A": 1.0672011483196542,
+        "H_site_final": "bridge (L1 Nb-Nb)",
+        "H_nearest_neighbour": "Nb1 1.989 A"
+      }
+    },
+    "M1": {
+      "checkpoint_sha256": "fa762686badcba80a689e198eb3f46cca7972720496058bfbbbea46f1002cf8d",
+      "H_force_at_DFT_r0_eV_A": [
+        -7.651449121618314e-06,
+        0.0015187817670811222,
+        -0.6879869442256614
+      ],
+      "slab": {
+        "E_initial_eV": -487.0998544512184,
+        "E_final_eV": -487.1797416790675,
+        "dE_eV": -0.07988722784909896,
+        "fmax_initial_eV_A": 0.7121910433444788,
+        "fmax_final_eV_A": 0.004625880410264022,
+        "steps": 94,
+        "converged": true,
+        "seconds": 103.32991450000554,
+        "max_substrate_disp_A": 0.43440062626559667,
+        "max_substrate_disp_atom": "Nb0",
+        "max_substrate_disp_layer": 1,
+        "max_disp_by_top_layer_A": {
+          "1": 0.43440062626559667,
+          "2": 0.25781452405787003,
+          "3": 0.3365788862230313,
+          "4": 0.29414688337231926,
+          "5": 0.29993125719307784,
+          "6": 0.2806957424871622
+        }
+      },
+      "h_only": {
+        "E_initial_eV": -491.24420893006516,
+        "E_final_eV": -491.2808849706949,
+        "dE_eV": -0.036676040629743056,
+        "fmax_initial_eV_A": 0.6879886206773801,
+        "fmax_final_eV_A": 0.008310679936504113,
+        "steps": 3,
+        "converged": true,
+        "seconds": 3.3265437999507412,
+        "max_substrate_disp_A": 0.0,
+        "max_substrate_disp_atom": "Nb1",
+        "max_substrate_disp_layer": 1,
+        "max_disp_by_top_layer_A": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0
+        },
+        "H_disp_xyz_A": [
+          -1.2245788016951309e-06,
+          0.0003336161474520871,
+          -0.10066536383502012
+        ],
+        "H_disp_A": 0.10066591666135272,
+        "H_lateral_disp_A": 0.0003336183949275194,
+        "H_height_final_A": 1.0724516609649726,
+        "H_height_above_L1_mean_A": 1.0724516609649726,
+        "H_site_final": "bridge (L1 Nb-Nb)",
+        "H_nearest_neighbour": "Nb1 1.992 A"
+      },
+      "full": {
+        "E_initial_eV": -491.24420893006516,
+        "E_final_eV": -491.3078793188014,
+        "dE_eV": -0.06367038873622732,
+        "fmax_initial_eV_A": 0.6879886206773801,
+        "fmax_final_eV_A": 0.008943217426218045,
+        "steps": 96,
+        "converged": true,
+        "seconds": 140.58275529998355,
+        "max_substrate_disp_A": 0.34072877295062454,
+        "max_substrate_disp_atom": "Nb1",
+        "max_substrate_disp_layer": 1,
+        "max_disp_by_top_layer_A": {
+          "1": 0.34072877295062454,
+          "2": 0.31146275539068236,
+          "3": 0.3294820005000604,
+          "4": 0.2899436867264163,
+          "5": 0.30000295939422794,
+          "6": 0.2801087600886362
+        },
+        "H_disp_xyz_A": [
+          -2.2999495391085034e-05,
+          0.020596186304401076,
+          -0.4401048102635343
+        ],
+        "H_disp_A": 0.4405864812228854,
+        "H_lateral_disp_A": 0.02059619914601689,
+        "H_height_final_A": 1.0731437344964547,
+        "H_height_above_L1_mean_A": 1.0731437344964547,
+        "H_site_final": "bridge (L1 Nb-Nb)",
+        "H_nearest_neighbour": "Nb1 1.992 A"
+      }
+    }
+  }
+}

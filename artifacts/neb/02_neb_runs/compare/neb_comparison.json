@@ -1,0 +1,131 @@
+{
+  "framing": "MLIP pathway estimate (MACE), not DFT-validated; 1 ML H, 1x1 cell",
+  "models": {
+    "M1": {
+      "nimages": 9,
+      "runs": [
+        "run_2026-10-10_M1_9_B1T",
+        "run_2026-10-10_M1_9_TB2"
+      ],
+      "saddle1_B1T_eV": 0.2522437663428718,
+      "T_eV": 0.18651311052622077,
+      "saddle2_TB2_eV": 0.2303498441720535,
+      "B2_eV": 0.008108634060249642,
+      "T_well_depth_to_B1_side_eV": 0.06573065581665105,
+      "T_well_depth_to_B2_side_eV": 0.04383673364583274,
+      "saddle1_imag_cm-1": -443.03731747380135,
+      "saddle1_imag_axis": "y",
+      "saddle2_imag_cm-1": -370.72872644194314,
+      "saddle2_imag_axis": "x",
+      "converged_all": true
+    },
+    "M0": {
+      "nimages": 7,
+      "runs": [
+        "run_2026-10-10_M0_7_B1T",
+        "run_2026-10-10_M0_7_TB2_v2"
+      ],
+      "saddle1_B1T_eV": 0.2950622894672392,
+      "T_eV": 0.23786133775257667,
+      "saddle2_TB2_eV": 0.2786500607610378,
+      "B2_eV": 0.009664085493739094,
+      "T_well_depth_to_B1_side_eV": 0.05720095171466255,
+      "T_well_depth_to_B2_side_eV": 0.04078872300846115,
+      "saddle1_imag_cm-1": -427.6393083746412,
+      "saddle1_imag_axis": "y",
+      "saddle2_imag_cm-1": -383.5229169670585,
+      "saddle2_imag_axis": "x",
+      "converged_all": true
+    }
+  },
+  "sensitivity": [
+    {
+      "model": "M0",
+      "path": "B1T",
+      "nimages": 7,
+      "barrier_images_eV": 0.2950622894672392,
+      "barrier_fit_eV": 0.2950622894672392,
+      "reaction_energy_eV": 0.23786133775257667,
+      "imag_cm-1": -427.6393083746412,
+      "run": "run_2026-10-10_M0_7_B1T"
+    },
+    {
+      "model": "M0",
+      "path": "TB2",
+      "nimages": 7,
+      "barrier_images_eV": 0.04078872300846115,
+      "barrier_fit_eV": 0.04079725581844722,
+      "reaction_energy_eV": -0.22819725225883758,
+      "imag_cm-1": -383.5229169670585,
+      "run": "run_2026-10-10_M0_7_TB2_v2"
+    },
+    {
+      "model": "M1",
+      "path": "B1T",
+      "nimages": 7,
+      "barrier_images_eV": 0.2523092781856917,
+      "barrier_fit_eV": 0.2523092781856918,
+      "reaction_energy_eV": 0.18651311052622077,
+      "imag_cm-1": -434.30600940554035,
+      "run": "run_2026-10-10_M1_7_B1T"
+    },
+    {
+      "model": "M1",
+      "path": "B1T",
+      "nimages": 9,
+      "barrier_images_eV": 0.2522437663428718,
+      "barrier_fit_eV": 0.2523056364153906,
+      "reaction_energy_eV": 0.18651311052622077,
+      "imag_cm-1": -443.03731747380135,
+      "run": "run_2026-10-10_M1_9_B1T"
+    },
+    {
+      "model": "M1",
+      "path": "TB2",
+      "nimages": 7,
+      "barrier_images_eV": 0.043747220105217366,
+      "barrier_fit_eV": 0.04374722010521742,
+      "reaction_energy_eV": -0.17840447646597113,
+      "imag_cm-1": -374.63914171936887,
+      "run": "run_2026-10-10_M1_7_TB2"
+    },
+    {
+      "model": "M1",
+      "path": "TB2",
+      "nimages": 9,
+      "barrier_images_eV": 0.04383673364583274,
+      "barrier_fit_eV": 0.04383673364583275,
+      "reaction_energy_eV": -0.17840447646597113,
+      "imag_cm-1": -370.72872644194314,
+      "run": "run_2026-10-10_M1_9_TB2"
+    }
+  ],
+  "provenance": {
+    "M1": {
+      "date": "2026-10-10T12:34:23",
+      "python": "3.12.13",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "ase": "3.29.0",
+      "numpy": "2.5.2",
+      "model": "M1",
+      "model_path": "local://M1_5epoch.model",
+      "torch": "2.13.0+cpu",
+      "torch_threads": 10,
+      "mace": "0.3.16",
+      "model_sha256": "fa762686badcba80a689e198eb3f46cca7972720496058bfbbbea46f1002cf8d"
+    },
+    "M0": {
+      "date": "2026-10-10T12:48:21",
+      "python": "3.12.13",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "ase": "3.29.0",
+      "numpy": "2.5.2",
+      "model": "M0",
+      "model_path": "local://20231210mace128L0_energy_epoch249model",
+      "torch": "2.13.0+cpu",
+      "torch_threads": 10,
+      "mace": "0.3.16",
+      "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736"
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "framing": "MLIP pathway estimate (MACE), not DFT-validated; 1 ML H, 1x1 cell",
+  "args": {
+    "model": "M0",
+    "model_path": null,
+    "nimages": 7,
+    "path": "B1T",
+    "k": 0.1,
+    "optimizer": "fire",
+    "fmax1": 0.03,
+    "fmax2": 0.01,
+    "steps": 1500,
+    "fd_delta": 0.01,
+    "endpoints_dir": "local://2026-10-09_endpoints",
+    "tag": "",
+    "dry_run": false
+  },
+  "provenance": {
+    "date": "2026-10-10T12:48:21",
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "ase": "3.29.0",
+    "numpy": "2.5.2",
+    "model": "M0",
+    "model_path": "local://20231210mace128L0_energy_epoch249model",
+    "torch": "2.13.0+cpu",
+    "torch_threads": 10,
+    "mace": "0.3.16",
+    "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736"
+  },
+  "setup_checks": {
+    "n_atoms": 57,
+    "H_index": 0,
+    "top_Nb_index": 1,
+    "fixed_atoms": 16,
+    "fixed_source": "from file",
+    "cell_a_A": 3.3583631516,
+    "cell_b_A": 3.3583631516,
+    "B2_H_offset_from_expected_A": 0.0006579501373473488,
+    "B2_H_lattice_shift_applied_A": 0.0,
+    "T_waypoint_source": "relaxed M0_T.extxyz",
+    "T_H_offset_from_expected_A": 0.010132467977438955,
+    "T_xy_to_topNb_A": 0.0007274503145684534,
+    "fixed_atoms_max_diff_B1_B2_A": 0.0,
+    "free_substrate_max_disp_B1_B2_A": 0.023435511618719287
+  },
+  "E_B1_abs_eV": -489.0747345273221,
+  "initial_band_E_rel_B1_eV": [
+    0.0,
+    0.13297924779448067,
+    0.3327552892342851,
+    0.4361446694551887,
+    0.3996994310552964,
+    0.2988290757566574,
+    0.23786133775257667
+  ],
+  "endpoint_fmax_eV_per_A": [
+    0.0049011720384466665,
+    0.004532678363784259
+  ],
+  "cost_estimate": {
+    "seconds_per_force_call": 2.869340759993065,
+    "seconds_per_neb_step": 14.346703799965326,
+    "phase1_minutes_range(150-600 steps)": [
+      35.866759499913314,
+      143.46703799965326
+    ],
+    "phase2_minutes_range(100-400 steps)": [
+      23.91117299994221,
+      95.64469199976884
+    ]
+  },
+  "phases": [
+    {
+      "phase": "phase1_neb",
+      "fmax_target": 0.03,
+      "steps": 31,
+      "final_max_force": 0.017123984647489175,
+      "converged": true,
+      "minutes": 6.983417443333504
+    },
+    {
+      "phase": "phase2_ci",
+      "fmax_target": 0.01,
+      "steps": 17,
+      "final_max_force": 0.006931462327995734,
+      "converged": true,
+      "minutes": 3.824200801666787
+    }
+  ],
+  "result": {
+    "framing": "MLIP pathway estimate (MACE), not DFT-validated; 1 ML H, 1x1 cell",
+    "barrier_images_eV": 0.2950622894672392,
+    "barrier_fit_eV": 0.2950622894672392,
+    "reaction_energy_eV": 0.23786133775257667,
+    "climbing_image": 3,
+    "interior_maxima": [
+      3
+    ],
+    "interior_minima": [],
+    "T_intermediate_found": false,
+    "saddle_imaginary_H_modes": 1,
+    "endpoint_fmax_eV_per_A": [
+      0.0049011720384466665,
+      0.004532678363784259
+    ],
+    "endpoint_max_position_change_A": 0.0,
+    "h_modes": {
+      "3": {
+        "kind": "highest image (CI)",
+        "modes": [
+          {
+            "freq_cm-1": -427.6393083746412,
+            "k_eV_per_A2": -0.6778843567648573,
+            "dominant_axis": "y",
+            "eigvec_xyz": [
+              9.716102470580657e-06,
+              -0.9060646118566157,
+              0.4231393612590504
+            ]
+          },
+          {
+            "freq_cm-1": 323.411803505215,
+            "k_eV_per_A2": 0.3877145572740969,
+            "dominant_axis": "x",
+            "eigvec_xyz": [
+              0.9999999999052409,
+              4.676659833143847e-06,
+              -1.2947853579149579e-05
+            ]
+          },
+          {
+            "freq_cm-1": 1844.068265227949,
+            "k_eV_per_A2": 12.605334164161954,
+            "dominant_axis": "z",
+            "eigvec_xyz": [
+              -9.752713072946113e-06,
+              -0.4231393613447568,
+              -0.9060646118161968
+            ]
+          }
+        ]
+      }
+    },
+    "images": [
+      {
+        "image": 0,
+        "E_rel_first_eV": 0.0,
+        "E_rel_B1_eV": 0.0,
+        "H_dxy_to_topNb_A": 1.6790514525302271,
+        "H_height_above_topNb_A": 1.0673130600000036,
+        "true_fmax_free_eV_per_A": 0.0049011720384466665
+      },
+      {
+        "image": 1,
+        "E_rel_first_eV": 0.047511505233785556,
+        "E_rel_B1_eV": 0.047511505233785556,
+        "H_dxy_to_topNb_A": 1.578292292369504,
+        "H_height_above_topNb_A": 1.125211786476882,
+        "true_fmax_free_eV_per_A": 0.44604233774913155
+      },
+      {
+        "image": 2,
+        "E_rel_first_eV": 0.22573818273997404,
+        "E_rel_B1_eV": 0.22573818273997404,
+        "H_dxy_to_topNb_A": 1.2362832765823466,
+        "H_height_above_topNb_A": 1.353242132433536,
+        "true_fmax_free_eV_per_A": 0.41220658059800913
+      },
+      {
+        "image": 3,
+        "E_rel_first_eV": 0.2950622894672392,
+        "E_rel_B1_eV": 0.2950622894672392,
+        "H_dxy_to_topNb_A": 0.9001865007494889,
+        "H_height_above_topNb_A": 1.545064989521876,
+        "true_fmax_free_eV_per_A": 0.009444352037761767
+      },
+      {
+        "image": 4,
+        "E_rel_first_eV": 0.27091661678224455,
+        "E_rel_B1_eV": 0.27091661678224455,
+        "H_dxy_to_topNb_A": 0.5564994265867418,
+        "H_height_above_topNb_A": 1.6739495817749486,
+        "true_fmax_free_eV_per_A": 0.09429897375872981
+      },
+      {
+        "image": 5,
+        "E_rel_first_eV": 0.24567576421441117,
+        "E_rel_B1_eV": 0.24567576421441117,
+        "H_dxy_to_topNb_A": 0.2454431372011951,
+        "H_height_above_topNb_A": 1.7366085762874803,
+        "true_fmax_free_eV_per_A": 0.053190822033134556
+      },
+      {
+        "image": 6,
+        "E_rel_first_eV": 0.23786133775257667,
+        "E_rel_B1_eV": 0.23786133775257667,
+        "H_dxy_to_topNb_A": 0.011232996800805183,
+        "H_height_above_topNb_A": 1.7517653799999948,
+        "true_fmax_free_eV_per_A": 0.004532678363784259
+      }
+    ]
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "framing": "MLIP pathway estimate (MACE), not DFT-validated; 1 ML H, 1x1 cell",
+  "args": {
+    "model": "M1",
+    "model_path": null,
+    "nimages": 9,
+    "path": "TB2",
+    "k": 0.1,
+    "optimizer": "fire",
+    "fmax1": 0.03,
+    "fmax2": 0.01,
+    "steps": 1500,
+    "fd_delta": 0.01,
+    "endpoints_dir": "local://2026-10-09_endpoints",
+    "tag": "",
+    "dry_run": false
+  },
+  "provenance": {
+    "date": "2026-10-10T12:42:09",
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "ase": "3.29.0",
+    "numpy": "2.5.2",
+    "model": "M1",
+    "model_path": "local://M1_5epoch.model",
+    "torch": "2.13.0+cpu",
+    "torch_threads": 10,
+    "mace": "0.3.16",
+    "model_sha256": "fa762686badcba80a689e198eb3f46cca7972720496058bfbbbea46f1002cf8d"
+  },
+  "setup_checks": {
+    "n_atoms": 57,
+    "H_index": 0,
+    "top_Nb_index": 1,
+    "fixed_atoms": 16,
+    "fixed_source": "from file",
+    "cell_a_A": 3.3583631516,
+    "cell_b_A": 3.3583631516,
+    "B2_H_offset_from_expected_A": 0.0008768728398276665,
+    "B2_H_lattice_shift_applied_A": 0.0,
+    "T_waypoint_source": "relaxed M1_T.extxyz",
+    "T_H_offset_from_expected_A": 0.007497447305316822,
+    "T_xy_to_topNb_A": 0.0011221806875835632,
+    "fixed_atoms_max_diff_B1_B2_A": 0.0,
+    "free_substrate_max_disp_B1_B2_A": 0.02082192358219006
+  },
+  "E_B1_abs_eV": -491.30791179571486,
+  "initial_band_E_rel_B1_eV": [
+    0.18651311052622077,
+    0.22201463101004038,
+    0.29230385890838306,
+    0.3484668112629379,
+    0.35556831493670416,
+    0.2925665175785639,
+    0.17436108791974902,
+    0.06913819845681246,
+    0.008108634060249642
+  ],
+  "endpoint_fmax_eV_per_A": [
+    0.004397368497034717,
+    0.004669609522282601
+  ],
+  "cost_estimate": {
+    "seconds_per_force_call": 1.0726595857164025,
+    "seconds_per_neb_step": 7.508617100014818,
+    "phase1_minutes_range(150-600 steps)": [
+      18.771542750037046,
+      75.08617100014818
+    ],
+    "phase2_minutes_range(100-400 steps)": [
+      12.51436183335803,
+      50.05744733343212
+    ]
+  },
+  "phases": [
+    {
+      "phase": "phase1_neb",
+      "fmax_target": 0.03,
+      "steps": 32,
+      "final_max_force": 0.026479282642700715,
+      "converged": true,
+      "minutes": 4.048357380000137
+    },
+    {
+      "phase": "phase2_ci",
+      "fmax_target": 0.01,
+      "steps": 11,
+      "final_max_force": 0.00989667949712432,
+      "converged": true,
+      "minutes": 1.5945819183330363
+    }
+  ],
+  "result": {
+    "framing": "MLIP pathway estimate (MACE), not DFT-validated; 1 ML H, 1x1 cell",
+    "barrier_images_eV": 0.04383673364583274,
+    "barrier_fit_eV": 0.04383673364583275,
+    "reaction_energy_eV": -0.17840447646597113,
+    "climbing_image": 4,
+    "interior_maxima": [
+      4
+    ],
+    "interior_minima": [],
+    "T_intermediate_found": false,
+    "saddle_imaginary_H_modes": 1,
+    "endpoint_fmax_eV_per_A": [
+      0.004397368497034717,
+      0.004669609522282601
+    ],
+    "endpoint_max_position_change_A": 0.0,
+    "h_modes": {
+      "4": {
+        "kind": "highest image (CI)",
+        "modes": [
+          {
+            "freq_cm-1": -370.72872644194314,
+            "k_eV_per_A2": -0.5094632403771902,
+            "dominant_axis": "x",
+            "eigvec_xyz": [
+              0.912191811389447,
+              0.0006076572576490524,
+              0.4097630168605956
+            ]
+          },
+          {
+            "freq_cm-1": 337.9906610346164,
+            "k_eV_per_A2": 0.4234574481955739,
+            "dominant_axis": "y",
+            "eigvec_xyz": [
+              0.00033993952558183054,
+              -0.9999996785424133,
+              0.0007261929419337676
+            ]
+          },
+          {
+            "freq_cm-1": 1816.7089575000907,
+            "k_eV_per_A2": 12.234073634532331,
+            "dominant_axis": "z",
+            "eigvec_xyz": [
+              -0.4097633264155766,
+              0.0005231326095682665,
+              0.9121917247251887
+            ]
+          }
+        ]
+      }
+    },
+    "images": [
+      {
+        "image": 0,
+        "E_rel_first_eV": 0.0,
+        "E_rel_B1_eV": 0.18651311052622077,
+        "H_dxy_to_topNb_A": 0.007609044505934999,
+        "H_height_above_topNb_A": 1.752507940000001,
+        "true_fmax_free_eV_per_A": 0.004397368497034717
+      },
+      {
+        "image": 1,
+        "E_rel_first_eV": 0.0038076795844972366,
+        "E_rel_B1_eV": 0.190320790110718,
+        "H_dxy_to_topNb_A": 0.18454218035266537,
+        "H_height_above_topNb_A": 1.7434441366469429,
+        "true_fmax_free_eV_per_A": 0.03504350061664786
+      },
+      {
+        "image": 2,
+        "E_rel_first_eV": 0.015352041371443192,
+        "E_rel_B1_eV": 0.20186515189766396,
+        "H_dxy_to_topNb_A": 0.3892234690464997,
+        "H_height_above_topNb_A": 1.7130364558856286,
+        "true_fmax_free_eV_per_A": 0.06411883110790052
+      },
+      {
+        "image": 3,
+        "E_rel_first_eV": 0.03192469851694568,
+        "E_rel_B1_eV": 0.21843780904316645,
+        "H_dxy_to_topNb_A": 0.6135868426405158,
+        "H_height_above_topNb_A": 1.654485876426591,
+        "true_fmax_free_eV_per_A": 0.07063500159076547
+      },
+      {
+        "image": 4,
+        "E_rel_first_eV": 0.04383673364583274,
+        "E_rel_B1_eV": 0.2303498441720535,
+        "H_dxy_to_topNb_A": 0.8571718990454769,
+        "H_height_above_topNb_A": 1.5602218371462016,
+        "true_fmax_free_eV_per_A": 0.006499496895383501
+      },
+      {
+        "image": 5,
+        "E_rel_first_eV": 0.016142106803386014,
+        "E_rel_B1_eV": 0.20265521732960678,
+        "H_dxy_to_topNb_A": 1.1161752189075882,
+        "H_height_above_topNb_A": 1.422917137895979,
+        "true_fmax_free_eV_per_A": 0.23474461210910944
+      },
+      {
+        "image": 6,
+        "E_rel_first_eV": -0.07241732224440511,
+        "E_rel_B1_eV": 0.11409578828181566,
+        "H_dxy_to_topNb_A": 1.3707776667578009,
+        "H_height_above_topNb_A": 1.2609435980539274,
+        "true_fmax_free_eV_per_A": 0.35178173901343435
+      },
+      {
+        "image": 7,
+        "E_rel_first_eV": -0.16519479278531435,
+        "E_rel_B1_eV": 0.021318317740906423,
+        "H_dxy_to_topNb_A": 1.6354350935934985,
+        "H_height_above_topNb_A": 1.0990399516021085,
+        "true_fmax_free_eV_per_A": 0.21477364132257534
+      },
+      {
+        "image": 8,
+        "E_rel_first_eV": -0.17840447646597113,
+        "E_rel_B1_eV": 0.008108634060249642,
+        "H_dxy_to_topNb_A": 1.6788789893459428,
+        "H_height_above_topNb_A": 1.0805658000000022,
+        "true_fmax_free_eV_per_A": 0.004669609522282601
+      }
+    ]
+  }
+}
