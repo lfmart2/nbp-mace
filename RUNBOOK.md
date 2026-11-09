@@ -163,6 +163,53 @@ of `path_analysis.py`. Each band takes 7--11 min on a laptop CPU. Generated `*.e
 files are coordinate-bearing and Git-ignored; the committed summaries are in
 `artifacts/neb/`.
 
+## 9. MLIP-based H surface diffusion (hTST + kMC)
+
+These scripts need only NumPy, SciPy, and Matplotlib (already in
+`requirements-lock.txt`). They read the committed Track 1 results
+(`artifacts/neb/03_analysis/key_points.json` and
+`artifacts/neb/01_endpoints/pes_xy/xy_map_M0.csv`, `xy_map_M1.csv`), so no
+checkpoint, coordinate file, or DFT output is needed. Every path is resolved
+relative to the repository; no environment variable is required.
+
+Optional: if `MACE_M1_CHECKPOINT` and `MACE_MP0_SMALL_CHECKPOINT` are set
+(section 8), `rates.py` re-hashes both checkpoints and warns if they differ from
+the SHA-256 values recorded in `key_points.json`. Without them, or with
+`--skip-ckpt-hash`, it uses the recorded values.
+
+Run in this order; each script writes a date-stamped folder next to itself and
+the next one picks up the newest folder (Git-ignored). Times are for a laptop
+CPU.
+
+```powershell
+cd src\kmc\01_rates
+python rates.py                 # seconds; hTST rate catalogue, 200-600 K
+python exact_diffusion.py       # ~2-7 s; exact (Bloch) D(T) and Arrhenius fits
+
+cd ..\02_kmc
+python test_kmc.py              # ~1 min; 5 validation checks, exit code 0 = pass
+python kmc.py                   # ~1.5-2 min; M1 + M0 classical, 200-600 K, full + coarse-grained
+
+cd ..\03_results
+python sensitivity.py           # seconds; exact D for 22 model x variant sets, bands
+python spot_checks.py           # ~11 min; 66 kMC runs vs exact D, exit code 0 = all |z| < 4
+python make_figures.py          # ~10 s; writes src\kmc\04_figures\<date>\
+```
+
+Quicker options: `python spot_checks.py --temps 300` (~4 min), or build the
+figures from the committed spot checks instead of a new run:
+
+```powershell
+python make_figures.py --spot ..\..\..\artifacts\kmc\03_results\kmc_spot\spot_summary.json
+```
+
+Exact results (rates, D, bands) are deterministic and reproduce the committed
+`artifacts/kmc/` values to rounding. kMC runs use fixed seeds
+(`numpy.random.SeedSequence`); with the recorded NumPy version they reproduce
+the committed numbers, and on another platform they must still pass the same
+|z| < 4 tests. Committed summaries and figures are in `artifacts/kmc/`; see
+`docs/KMC_DIFFUSION.md` for what the numbers mean and do not mean.
+
 ## Data policy
 
 Raw VASP files, coordinate-bearing extxyz data, model checkpoints, and temporary

@@ -1,0 +1,4 @@
+# Track 3 artifacts are committed byte for byte, so the SHA-256 hashes recorded
+# in their provenance verify on every platform (no line-ending conversion).
+artifacts/kmc/** -text
+artifacts/kmc/README.md text
