@@ -1,0 +1,34 @@
+{
+ "date": "2026-11-09",
+ "script": "25_track3_kmc/03_results/make_figures.py",
+ "root": "env:MACE_PORTFOLIO",
+ "inputs": {
+  "results": {
+   "file": "25_track3_kmc/03_results/2026-11-09_sensitivity/results.json",
+   "sha256": "a801b0a634eef0711086afada6b3d041b59dbed235e66ba36227c4d0b353526d"
+  },
+  "spot_summary": {
+   "file": "25_track3_kmc/03_results/2026-11-09_kmc_spot/spot_summary.json",
+   "sha256": "2c770ca7f27e4032979a30e91539d17479ef311e4ca3f4202d8f5a238a1c690c"
+  },
+  "msd": {
+   "file": "25_track3_kmc/03_results/2026-11-09_kmc_spot/msd_300K_M1_classical.json",
+   "sha256": "d731da7497a09dd6174c63c621428ae2e213e5d9cee9a161bae93985c50300cb"
+  },
+  "kmc_summary": {
+   "file": "25_track3_kmc/02_kmc/2026-11-09_kmc/kmc_summary.json",
+   "sha256": "b6c6ecf1231d8023ee93c61faa26b71b7fefc01ce7a2e819af3a0981f854d91a"
+  },
+  "rates": {
+   "file": "25_track3_kmc/01_rates/2026-11-09_rates/rates.json",
+   "sha256": "b963904eed7f97326d541c95994dbb05a8b54a399c2a8ad0f81504bd5fc645c6"
+  }
+ },
+ "versions": {
+  "python": "3.12.13",
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.1"
+ },
+ "note": "MLIP-based harmonic-TST estimates; lattice model with 1 ML collective barriers; not DFT-validated; valid only above ~150\u2013200 K"
+}

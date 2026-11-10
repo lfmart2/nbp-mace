@@ -14,6 +14,10 @@ src/neb/**/run_*/
 src/neb/**/compare_*/
 src/neb/04_figures/
 
+# kMC reproduction outputs written next to the scripts (summaries live in artifacts/kmc/)
+src/kmc/**/20??-??-??_*/
+src/kmc/04_figures/
+
 # MACE training artefacts
 checkpoints/
 logs/

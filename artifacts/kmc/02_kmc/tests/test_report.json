@@ -1,0 +1,981 @@
+{
+ "provenance": {
+  "date": "2026-11-09",
+  "script": "25_track3_kmc/02_kmc/test_kmc.py",
+  "root": "env:MACE_PORTFOLIO",
+  "input": {
+   "rates": {
+    "file": "25_track3_kmc/01_rates/2026-11-09_rates/rates.json",
+    "sha256": "b963904eed7f97326d541c95994dbb05a8b54a399c2a8ad0f81504bd5fc645c6"
+   },
+   "exact_D": {
+    "file": "25_track3_kmc/01_rates/2026-11-09_exact_D/exact_D.json",
+    "sha256": "9d96bc6a1609c937232542610ad390fad4e961d828ec7ad55c9814d4b4db9dd7"
+   }
+  },
+  "versions": {
+   "python": "3.12.13",
+   "numpy": "2.5.2",
+   "matplotlib": "3.11.1",
+   "scipy": "1.18.1"
+  },
+  "base_seed": 20261109,
+  "n_walkers": 20000,
+  "n_events_per_walker": 1500,
+  "z_tol": 4.0,
+  "ks_p_min": 0.001,
+  "note": "validates the engine against the exact lattice solution; physical numbers are MLIP-based harmonic-TST estimates with 1 ML barriers, not DFT-validated"
+ },
+ "passed": true,
+ "failed": [],
+ "runtime_s": 60.700489000068046,
+ "cg_speedup": [
+  {
+   "T_K": 200,
+   "event_ratio": 2.969464895997934,
+   "wall_ratio": 2.9100940850998516
+  },
+  {
+   "T_K": 300,
+   "event_ratio": 2.80699920156571,
+   "wall_ratio": 3.834992105298969
+  },
+  {
+   "T_K": 600,
+   "event_ratio": 2.702396581340055,
+   "wall_ratio": 4.184673926469814
+  }
+ ],
+ "rows": [
+  {
+   "check": 1,
+   "case": "M1 classical 300 K",
+   "quantity": "occ T",
+   "kmc": 0.003590193644502428,
+   "reference": 0.003592762389210095,
+   "z": -2.105347036038857,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 1,
+   "case": "M1 classical 300 K",
+   "quantity": "occ B1",
+   "kmc": 0.5606766289645878,
+   "reference": 0.5601677904979835,
+   "z": 2.213597430131222,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 1,
+   "case": "M1 classical 300 K",
+   "quantity": "occ B2",
+   "kmc": 0.4357331773909126,
+   "reference": 0.4362394471128063,
+   "z": -2.209192458388798,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 1,
+   "case": "M1 classical 600 K",
+   "quantity": "occ T",
+   "kmc": 0.11008971058696389,
+   "reference": 0.11010318522354719,
+   "z": -0.3672483581555421,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 1,
+   "case": "M1 classical 600 K",
+   "quantity": "occ B1",
+   "kmc": 0.46587916318114475,
+   "reference": 0.4656659380368779,
+   "z": 1.1190269844864769,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 1,
+   "case": "M1 classical 600 K",
+   "quantity": "occ B2",
+   "kmc": 0.42403112623189054,
+   "reference": 0.42423087673957494,
+   "z": -1.1306573205021655,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 1,
+   "case": "M1 quantum_harmonic 300 K",
+   "quantity": "occ T",
+   "kmc": 0.007583840664047746,
+   "reference": 0.007586481732648148,
+   "z": -0.8561673873477498,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 1,
+   "case": "M1 quantum_harmonic 300 K",
+   "quantity": "occ B1",
+   "kmc": 0.5145112424783821,
+   "reference": 0.5140477744601909,
+   "z": 2.657927277976571,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 1,
+   "case": "M1 quantum_harmonic 300 K",
+   "quantity": "occ B2",
+   "kmc": 0.4779049168575741,
+   "reference": 0.47836574380716096,
+   "z": -2.6534516771587997,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 1,
+   "case": "M0 classical 300 K",
+   "quantity": "occ T",
+   "kmc": 0.0005620437432694547,
+   "reference": 0.0005624162345880455,
+   "z": -1.8877789010443309,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 1,
+   "case": "M0 classical 300 K",
+   "quantity": "occ B1",
+   "kmc": 0.5817324900094102,
+   "reference": 0.5816008916766225,
+   "z": 0.7720421851739779,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 1,
+   "case": "M0 classical 300 K",
+   "quantity": "occ B2",
+   "kmc": 0.41770546624732663,
+   "reference": 0.41783669208878943,
+   "z": -0.7701496268400855,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K full T",
+   "quantity": "mean residence (s)",
+   "kmc": 3.565458145280579e-13,
+   "reference": 3.565784258979398e-13,
+   "z": -0.3540993923967197,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K full T",
+   "quantity": "<t^2>/(2 mean^2)",
+   "kmc": 0.9999253102635638,
+   "reference": 1.0,
+   "z": -0.12932638183404727,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K full T",
+   "quantity": "KS p (n=50000)",
+   "kmc": 0.0034386810324888994,
+   "reference": 0.0,
+   "z": 0.5947517694502752,
+   "tolerance": "p>0.001",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K full B1",
+   "quantity": "mean residence (s)",
+   "kmc": 1.8255735580992332e-10,
+   "reference": 1.824476837437013e-10,
+   "z": 1.2869082113952799,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K full B1",
+   "quantity": "<t^2>/(2 mean^2)",
+   "kmc": 1.001058310565659,
+   "reference": 1.0,
+   "z": 1.013253308011615,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K full B1",
+   "quantity": "KS p (n=50000)",
+   "kmc": 0.0047815478719457905,
+   "reference": 0.0,
+   "z": 0.2025678702106965,
+   "tolerance": "p>0.001",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K full B2",
+   "quantity": "mean residence (s)",
+   "kmc": 6.226347838054848e-11,
+   "reference": 6.227218812687585e-11,
+   "z": -0.45164415907189764,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K full B2",
+   "quantity": "<t^2>/(2 mean^2)",
+   "kmc": 1.0000321305143227,
+   "reference": 1.0,
+   "z": 0.04639996931489985,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K full B2",
+   "quantity": "KS p (n=50000)",
+   "kmc": 0.002289255763421899,
+   "reference": 0.0,
+   "z": 0.9556237061093907,
+   "tolerance": "p>0.001",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 200 K full T",
+   "quantity": "mean residence (s)",
+   "kmc": 9.401391710790847e-13,
+   "reference": 9.40203649913381e-13,
+   "z": -0.2655566426520707,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 200 K full T",
+   "quantity": "<t^2>/(2 mean^2)",
+   "kmc": 1.0000236426424043,
+   "reference": 1.0,
+   "z": 0.040942365994075,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 200 K full T",
+   "quantity": "KS p (n=50000)",
+   "kmc": 0.0025648347697542206,
+   "reference": 0.0,
+   "z": 0.8969317338348568,
+   "tolerance": "p>0.001",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 200 K full B1",
+   "quantity": "mean residence (s)",
+   "kmc": 2.4196068540492414e-08,
+   "reference": 2.419028231818133e-08,
+   "z": 0.4386769288620951,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 200 K full B1",
+   "quantity": "<t^2>/(2 mean^2)",
+   "kmc": 1.000580622612901,
+   "reference": 1.0,
+   "z": 0.476211149599551,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 200 K full B1",
+   "quantity": "KS p (n=50000)",
+   "kmc": 0.004076702662152321,
+   "reference": 0.0,
+   "z": 0.3762830112443578,
+   "tolerance": "p>0.001",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 200 K full B2",
+   "quantity": "mean residence (s)",
+   "kmc": 4.632543056175001e-09,
+   "reference": 4.6325034923869685e-09,
+   "z": 0.029151425611143443,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 200 K full B2",
+   "quantity": "<t^2>/(2 mean^2)",
+   "kmc": 1.0001487046171391,
+   "reference": 1.0,
+   "z": 0.22699544273682912,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 200 K full B2",
+   "quantity": "KS p (n=50000)",
+   "kmc": 0.005360457830036358,
+   "reference": 0.0,
+   "z": 0.11263756924039406,
+   "tolerance": "p>0.001",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K cg B1",
+   "quantity": "mean residence (s)",
+   "kmc": 2.1513020311070978e-10,
+   "reference": 2.1524242668498626e-10,
+   "z": -1.0277624601478061,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K cg B1",
+   "quantity": "<t^2>/(2 mean^2)",
+   "kmc": 0.998728752734244,
+   "reference": 1.0,
+   "z": -1.1206798501474649,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K cg B1",
+   "quantity": "KS p (n=50000)",
+   "kmc": 0.00403973469719221,
+   "reference": 0.0,
+   "z": 0.3875068823701076,
+   "tolerance": "p>0.001",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K cg B2",
+   "quantity": "mean residence (s)",
+   "kmc": 9.547302008836615e-11,
+   "reference": 9.545650823560455e-11,
+   "z": 0.4515710512364869,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K cg B2",
+   "quantity": "<t^2>/(2 mean^2)",
+   "kmc": 1.0002084890078855,
+   "reference": 1.0,
+   "z": 0.24340751924921858,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 2,
+   "case": "M1 classical 300 K cg B2",
+   "quantity": "KS p (n=50000)",
+   "kmc": 0.0027757102463608074,
+   "reference": 0.0,
+   "z": 0.8353131498375393,
+   "tolerance": "p>0.001",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 200 K",
+   "quantity": "closed form vs exact_D.json D_x",
+   "kmc": 2.431791843809986e-08,
+   "reference": 2.431791843809985e-08,
+   "z": 4.440892098500626e-16,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 200 K",
+   "quantity": "D_x (cm2/s)",
+   "kmc": 2.4254425354948554e-08,
+   "reference": 2.431791843809985e-08,
+   "z": -0.22121958725862723,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 200 K",
+   "quantity": "closed form vs exact_D.json D_y",
+   "kmc": 6.995446135867167e-09,
+   "reference": 6.9954461358672055e-09,
+   "z": 5.551115123125783e-15,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 200 K",
+   "quantity": "D_y (cm2/s)",
+   "kmc": 7.182663742070982e-09,
+   "reference": 6.9954461358672055e-09,
+   "z": 1.672955329125491,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 300 K",
+   "quantity": "closed form vs exact_D.json D_x",
+   "kmc": 1.9748412962825986e-06,
+   "reference": 1.974841296282599e-06,
+   "z": 2.220446049250313e-16,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 300 K",
+   "quantity": "D_x (cm2/s)",
+   "kmc": 1.993664356354091e-06,
+   "reference": 1.974841296282599e-06,
+   "z": 0.7288465137835477,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 300 K",
+   "quantity": "closed form vs exact_D.json D_y",
+   "kmc": 8.655280987351765e-07,
+   "reference": 8.655280987351764e-07,
+   "z": 2.220446049250313e-16,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 300 K",
+   "quantity": "D_y (cm2/s)",
+   "kmc": 8.683778755968238e-07,
+   "reference": 8.655280987351764e-07,
+   "z": 0.25474448892714235,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 400 K",
+   "quantity": "closed form vs exact_D.json D_x",
+   "kmc": 1.7481975185685717e-05,
+   "reference": 1.7481975185685707e-05,
+   "z": 6.661338147750939e-16,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 400 K",
+   "quantity": "D_x (cm2/s)",
+   "kmc": 1.754841029184023e-05,
+   "reference": 1.7481975185685707e-05,
+   "z": 0.25280594318707283,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 400 K",
+   "quantity": "closed form vs exact_D.json D_y",
+   "kmc": 9.457349668710417e-06,
+   "reference": 9.457349668710417e-06,
+   "z": 0.0,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 400 K",
+   "quantity": "D_y (cm2/s)",
+   "kmc": 9.38103611093357e-06,
+   "reference": 9.457349668710417e-06,
+   "z": -0.548875692163218,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 600 K",
+   "quantity": "closed form vs exact_D.json D_x",
+   "kmc": 0.00014286675142946283,
+   "reference": 0.00014286675142946285,
+   "z": 2.220446049250313e-16,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 600 K",
+   "quantity": "D_x (cm2/s)",
+   "kmc": 0.0001408795827041013,
+   "reference": 0.00014286675142946285,
+   "z": -1.1464810554652756,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 600 K",
+   "quantity": "closed form vs exact_D.json D_y",
+   "kmc": 9.539818074031133e-05,
+   "reference": 9.539818074031133e-05,
+   "z": 0.0,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 classical 600 K",
+   "quantity": "D_y (cm2/s)",
+   "kmc": 9.750489502116246e-05,
+   "reference": 9.539818074031133e-05,
+   "z": 1.4495051039785396,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M0 classical 300 K",
+   "quantity": "closed form vs exact_D.json D_x",
+   "kmc": 3.417057584255594e-07,
+   "reference": 3.4170575842556023e-07,
+   "z": 2.4424906541753444e-15,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M0 classical 300 K",
+   "quantity": "D_x (cm2/s)",
+   "kmc": 3.3532661831031453e-07,
+   "reference": 3.4170575842556023e-07,
+   "z": -1.3886076566580277,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M0 classical 300 K",
+   "quantity": "closed form vs exact_D.json D_y",
+   "kmc": 1.850037380618598e-07,
+   "reference": 1.850037380618599e-07,
+   "z": 5.551115123125783e-16,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M0 classical 300 K",
+   "quantity": "D_y (cm2/s)",
+   "kmc": 1.8518222529898417e-07,
+   "reference": 1.850037380618599e-07,
+   "z": 0.08104977490112517,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 quantum_harmonic 300 K",
+   "quantity": "closed form vs exact_D.json D_x",
+   "kmc": 3.5693167499367286e-06,
+   "reference": 3.5693167499367333e-06,
+   "z": 1.3322676295501878e-15,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 quantum_harmonic 300 K",
+   "quantity": "D_x (cm2/s)",
+   "kmc": 3.546256042131303e-06,
+   "reference": 3.5693167499367333e-06,
+   "z": -0.5185957539293536,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 quantum_harmonic 300 K",
+   "quantity": "closed form vs exact_D.json D_y",
+   "kmc": 1.5425849334286143e-06,
+   "reference": 1.5425849334286143e-06,
+   "z": 0.0,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 3,
+   "case": "M1 quantum_harmonic 300 K",
+   "quantity": "D_y (cm2/s)",
+   "kmc": 1.544304281425221e-06,
+   "reference": 1.5425849334286143e-06,
+   "z": 0.09174294218541641,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 200 K",
+   "quantity": "cg D_x vs full",
+   "kmc": 2.4518072864276167e-08,
+   "reference": 2.4254425354948554e-08,
+   "z": 0.5740972740416992,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 200 K",
+   "quantity": "cg D_x vs exact",
+   "kmc": 2.4518072864276167e-08,
+   "reference": 2.431791843809985e-08,
+   "z": 0.5583092764261276,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 200 K",
+   "quantity": "cg D_y vs full",
+   "kmc": 7.0446819298192886e-09,
+   "reference": 7.182663742070982e-09,
+   "z": -0.8706442764451784,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 200 K",
+   "quantity": "cg D_y vs exact",
+   "kmc": 7.0446819298192886e-09,
+   "reference": 6.9954461358672055e-09,
+   "z": 0.4387455936638424,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 200 K",
+   "quantity": "cg occ T",
+   "kmc": 0.00010440183176878723,
+   "reference": 0.00010443601091120036,
+   "z": -0.8157358687796844,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 200 K",
+   "quantity": "cg occ B1",
+   "kmc": 0.6001852792415535,
+   "reference": 0.6002815034199837,
+   "z": -0.5019381964584656,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 200 K",
+   "quantity": "cg occ B2",
+   "kmc": 0.39971031892667463,
+   "reference": 0.39961406056910503,
+   "z": 0.5021836920256894,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 200 K",
+   "quantity": "speed-up (events, wall)",
+   "kmc": 2.969464895997934,
+   "reference": 2.9100940850998516,
+   "z": null,
+   "tolerance": "events ratio > 1.5",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 300 K",
+   "quantity": "cg D_x vs full",
+   "kmc": 1.991153034161244e-06,
+   "reference": 1.993664356354091e-06,
+   "z": -0.06678205277362612,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 300 K",
+   "quantity": "cg D_x vs exact",
+   "kmc": 1.991153034161244e-06,
+   "reference": 1.974841296282599e-06,
+   "z": 0.5967577923497354,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 300 K",
+   "quantity": "cg D_y vs full",
+   "kmc": 8.5468133904118e-07,
+   "reference": 8.683778755968238e-07,
+   "z": -0.8068112333279128,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 300 K",
+   "quantity": "cg D_y vs exact",
+   "kmc": 8.5468133904118e-07,
+   "reference": 8.655280987351764e-07,
+   "z": -0.8494676724771767,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 300 K",
+   "quantity": "cg occ T",
+   "kmc": 0.0035938001080532992,
+   "reference": 0.003592762389210095,
+   "z": 0.7357642860537992,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 300 K",
+   "quantity": "cg occ B1",
+   "kmc": 0.5599067697487946,
+   "reference": 0.5601677904979835,
+   "z": -1.736403412909748,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 300 K",
+   "quantity": "cg occ B2",
+   "kmc": 0.4364994301431521,
+   "reference": 0.4362394471128063,
+   "z": 1.7367187736119207,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 300 K",
+   "quantity": "speed-up (events, wall)",
+   "kmc": 2.80699920156571,
+   "reference": 3.834992105298969,
+   "z": null,
+   "tolerance": "events ratio > 1.5",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 600 K",
+   "quantity": "cg D_x vs full",
+   "kmc": 0.00014197394363821912,
+   "reference": 0.0001408795827041013,
+   "z": 0.42230757615779957,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 600 K",
+   "quantity": "cg D_x vs exact",
+   "kmc": 0.00014197394363821912,
+   "reference": 0.00014286675142946285,
+   "z": -0.4634589129540637,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 600 K",
+   "quantity": "cg D_y vs full",
+   "kmc": 9.643142910524104e-05,
+   "reference": 9.750489502116246e-05,
+   "z": -0.5731994870998145,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 600 K",
+   "quantity": "cg D_y vs exact",
+   "kmc": 9.643142910524104e-05,
+   "reference": 9.539818074031133e-05,
+   "z": 0.8748627185583371,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 600 K",
+   "quantity": "cg occ T",
+   "kmc": 0.11012551332024009,
+   "reference": 0.11010318522354719,
+   "z": 0.7350351872818977,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 600 K",
+   "quantity": "cg occ B1",
+   "kmc": 0.4656766215005351,
+   "reference": 0.4656659380368779,
+   "z": 0.04990029824903787,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 600 K",
+   "quantity": "cg occ B2",
+   "kmc": 0.42419786517922037,
+   "reference": 0.42423087673957494,
+   "z": -0.16274466789394496,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 4,
+   "case": "M1 classical 600 K",
+   "quantity": "speed-up (events, wall)",
+   "kmc": 2.702396581340055,
+   "reference": 4.184673926469814,
+   "z": null,
+   "tolerance": "events ratio > 1.5",
+   "passed": true
+  },
+  {
+   "check": 5,
+   "case": "equal saddles",
+   "quantity": "closed form D_x/D_y",
+   "kmc": 1.0,
+   "reference": 1.0,
+   "z": null,
+   "tolerance": "== 1 (1e-12)",
+   "passed": true
+  },
+  {
+   "check": 5,
+   "case": "equal saddles",
+   "quantity": "Bloch vs closed form D_x",
+   "kmc": 1.9748412962826003e-06,
+   "reference": 1.9748412962825986e-06,
+   "z": 8.881784197001252e-16,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 5,
+   "case": "equal saddles",
+   "quantity": "Bloch vs closed form D_y",
+   "kmc": 1.974841296282598e-06,
+   "reference": 1.9748412962825986e-06,
+   "z": 2.220446049250313e-16,
+   "tolerance": "rel<1e-9",
+   "passed": true
+  },
+  {
+   "check": 5,
+   "case": "equal saddles",
+   "quantity": "D_x - D_y (cm2/s)",
+   "kmc": 2.9909733653176717e-09,
+   "reference": 0.0,
+   "z": 0.08173799955831441,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 5,
+   "case": "equal saddles",
+   "quantity": "D_x vs closed form",
+   "kmc": 1.9675073648416588e-06,
+   "reference": 1.9748412962825986e-06,
+   "z": -0.2658272774400625,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 5,
+   "case": "equal saddles",
+   "quantity": "D_y vs closed form",
+   "kmc": 1.964516391476341e-06,
+   "reference": 1.9748412962825986e-06,
+   "z": -0.3166389580622484,
+   "tolerance": "|z|<4",
+   "passed": true
+  },
+  {
+   "check": 5,
+   "case": "no S2",
+   "quantity": "D_x (cm2/s)",
+   "kmc": 0.0,
+   "reference": 0.0,
+   "z": null,
+   "tolerance": "== 0 exactly",
+   "passed": true
+  },
+  {
+   "check": 5,
+   "case": "no S2",
+   "quantity": "occ B2",
+   "kmc": 0.0,
+   "reference": 0.0,
+   "z": null,
+   "tolerance": "== 0 exactly",
+   "passed": true
+  },
+  {
+   "check": 5,
+   "case": "no S2",
+   "quantity": "D_y vs closed form",
+   "kmc": 1.5430430354010172e-06,
+   "reference": 1.5352760924873822e-06,
+   "z": 0.3175107653849043,
+   "tolerance": "|z|<4",
+   "passed": true
+  }
+ ]
+}

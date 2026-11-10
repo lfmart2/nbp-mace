@@ -197,6 +197,35 @@ percent. An H-only ZPE estimate keeps T as a minimum but shifts the classical
 ≈ 0.25 eV estimate by an uncertain −0.02 to −0.07 eV. DFT single points at S1,
 T, S2, and B2 are the planned validation once compute access returns.
 
+## MLIP-based H surface diffusion estimate (hTST + kMC)
+
+The CI-NEB key points (minima, saddles, and H-only modes) were carried one step
+further: harmonic transition-state theory rates on the periodic B1–T–B2 site
+network, an exact master-equation solution for the diffusion coefficient, and a
+rejection-free kinetic Monte Carlo engine written from scratch and validated
+against it. No new DFT or MACE calculations were run. The result is **an
+MLIP-based, harmonic-TST, lattice-kMC estimate of H surface diffusion on the
+Nb-terminated NbP slab with 1 ML collective barriers, not a measured or
+DFT-validated value**, valid only above ~150–200 K. Method, validation, and
+caveats are in [`docs/KMC_DIFFUSION.md`](docs/KMC_DIFFUSION.md).
+
+![Arrhenius plot of the H tracer diffusion coefficient with the ±0.05 eV band](artifacts/kmc/figures/fig_kmc_arrhenius.png)
+
+| 300 K, classical Vineyard hTST | M1 | ±0.05 eV band (M1) | M0 |
+|---|---:|---:|---:|
+| D_x (cm²/s) | 2.0 × 10⁻⁶ | 2.9 × 10⁻⁷ – 1.4 × 10⁻⁵ | 3.4 × 10⁻⁷ |
+| D_y (cm²/s) | 8.7 × 10⁻⁷ | 1.3 × 10⁻⁷ – 6.0 × 10⁻⁶ | 1.9 × 10⁻⁷ |
+| Eₐ,eff, x / y (200–600 K) | 0.225 / 0.246 eV | 0.175–0.275 / 0.196–0.296 eV | 0.274 / 0.291 eV |
+
+The ±0.05 eV saddle shift is a judgment-based range for the MLIP barrier error,
+not a statistical error bar; it spans a factor of ~7 each way at 300 K and ~18
+at 200 K, and it dominates every other source (prefactor choice, M0 versus M1,
+quantum corrections, a direct B1↔B2 route). The predicted anisotropy,
+D_x/D_y ≈ 2.3, rests on S2 lying 0.02 eV below S1 in the MLIP landscape, which
+no DFT data test. The kMC validation is internal: the engine reproduces the
+exact solution of the same lattice model within statistical error (all
+|z| < 4), which says nothing about whether the rates are right.
+
 ## Reproduce the DFT audit
 
 The raw VASP files remain local and are not committed. With the same directory
@@ -256,8 +285,12 @@ is verified or recalculated.
   transfer beyond the measured NbP-H configurations has been validated.
 - The available ZPE information is secondary and incomplete across states.
 - The CI-NEB path is an MLIP estimate with no DFT labels off the B1 site, at
-  1 ML coverage with collective H motion; it is not a validated barrier and
-  provides no rate constant.
+  1 ML coverage with collective H motion; it is not a validated barrier.
+- The diffusion coefficients are harmonic-TST, lattice-kMC estimates built on
+  those 1 ML collective barriers but applied to a single walker; their ±0.05 eV
+  band is a judgment, not a measured error, and no coverage dependence, H–H
+  interaction, subsurface site, defect, or tunnelling regime (below ~150 K)
+  is modelled.
 
 ## Repository map
 
@@ -273,9 +306,13 @@ src/summarize_m1_training.py    training history and reproducibility hashes
 src/neb/01_endpoints/           site map, H modes, free-substrate endpoint relaxations
 src/neb/02_neb_runs/            split-band CI-NEB (run_neb.py) and M0/M1 comparison
 src/neb/03_analysis/            path geometry, H-only modes/ZPE, NEB figures
+src/kmc/01_rates/               harmonic-TST rate catalogue and exact (Bloch) D(T)
+src/kmc/02_kmc/                 BKL kinetic Monte Carlo engine and its validation tests
+src/kmc/03_results/             sensitivity band, kMC spot checks, diffusion figures
 configs/                        versioned fine-tuning configurations
 docs/M1_PROTOCOL.md             leakage controls and acceptance criteria
 docs/NEB_PATHWAY.md             MLIP-driven CI-NEB method, results, and limits
+docs/KMC_DIFFUSION.md           hTST + kMC diffusion estimate, validation, and limits
 artifacts/             small generated evidence committed to Git
 tests/                 automated scientific and parsing checks
 RUNBOOK.md             minimal reproduction commands and data policy
@@ -300,6 +337,11 @@ learning experience while retaining explicit limits on generalization.
 **The MLIP-driven CI-NEB pathway estimate is complete as an MLIP-only result.**
 Its DFT validation (single points along the path, an H2 reference, and SOC
 versus collinear labels) is documented as future work pending compute access.
+
+**The hTST + kMC diffusion estimate is complete as an MLIP-only result.** The
+kMC engine is validated against the exact lattice solution; the rates are not
+validated. A ¼ ML coverage check (MACE only) and DFT single points at S1, T,
+S2, and B2 are documented as future work.
 
 ## License and citation
 
